@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			position: absolute;
+			left: 0;
+			width: 721px;
+			height: 628px;
+			background: url("../images/page25.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			overflow: hidden;
+		}
+		.answer{    
+			display: block;
+	    width: 60%;
+	    height: 18px;
+	    margin-left: 29%;
+	    margin-right: 11%;
+	    margin-bottom: 1px;
+	    cursor: pointer;
+	    border-radius: 3px;
+		}
+		.answer:nth-child(1){
+			margin-top: 275px;
+		}
+		.answer.correct.clicked{
+			background-color: rgba(139,195,74,0.3);
+			border: 1px solid rgba(139,195,74,1);
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+	    cursor: default;
+		}
+		.answer.clicked{
+			background-color: rgba(229,57,53,0.3);
+			border: 1px solid rgba(229,57,53,1);
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+	    cursor: default;
+		}
+		#dialogbox{
+			display: none;
+			background-color: rgba(127, 188, 97, 0.55);
+		    border: 1px solid rgb(102, 170, 94);
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+			-webkit-border-radius: 9px;
+			-moz-border-radius: 9px;
+			border-radius: 9px;
+		    cursor: default;
+		    width: 300px;
+		    height: 50px;
+		    position: absolute;
+		    overflow: hidden;
+		    top: 480px;
+		    margin-left: 30%;
+		}
+		#dialogTxt{
+			
+		    cursor: default;
+		    height: 50px;
+		    text-align: center;
+		    padding-top: 15px;
+
+		
+		}
+	</style>
+</head>
+	<body>	
+		<div class="container">
+
+		</div>
+		<div id = "dialogbox">
+		<div id = "dialogTxt"></div>
+		</div>
+
+	</body>
+	<script>
+		(function(){
+			var content = "",
+				answer = 4;
+			for (var i = 1; i <= 4; i++) { 
+		    content += (i == answer)?"<div class='answer correct'></div>":"<div class='answer'></div>";
+			}
+			document.querySelector('#dialogTxt').innerHTML = "Answer d";
+			document.querySelector('.container').innerHTML = content;
+			document.querySelector('.container').addEventListener('click',multichoices);
+
+		function multichoices(e){
+
+				switch(e.target.getAttribute('class')) {
+			    case 'question answer':
+						e.target.style.pointerEvents = "none";
+
+						
+			      break;
+			     case 'answer correct':
+			     	
+						e.target.classList.add('clicked');
+						document.querySelector('#dialogbox').style.display = "block";
+
+			    
+			      break;					
+			    default:
+						e.target.classList.add('clicked');
+				}
+			}
+		})();
+
+	</script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:500,100,300,700,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+	<script>
+   	function changeScreenSize(w,h)
+     {
+       window.resizeTo( w,h );
+     }
+	</script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header id="header">
+		<div class="wrapper">
+			<div class="main-title">COGNIZANT E-LEARNING CENTER</div>
+		</div>
+	</header>
+	<section class="content">
+		<aside class="chapters">
+			<header>CHAPTERS</header>
+			<nav>
+					<a href="#" onclick="navClick(1)"><span></span><p class="navigation">1</p></a>
+					<a href="#" onclick="navClick(2)"><span></span><p class="navigation">2</p></a>
+					<a href="#" onclick="navClick(3)"><span></span><p class="navigation">3</p></a>
+					<a href="#" onclick="navClick(4)"><span></span><p class="navigation">4</p></a>
+					<a href="#" onclick="navClick(5)"><span></span><p class="navigation">5</p></a>
+					<a href="#" onclick="navClick(6)"><span></span><p class="navigation">6</p></a>
+					<a href="#" onclick="navClick(7)"><span></span><p class="navigation">7</p></a>
+					<a href="#" onclick="navClick(8)"><span></span><p class="navigation">8</p></a>
+			</nav>
+		</aside>
+		<div class="elearning-content">
+			<div class="controls">
+				<div class="progress">
+					<div id="progress-title">The Introduction to Selling Techniques</div>
+					<div id="progress-page">1/9</div>
+				</div>
+				<div id="sound-mute"></div>
+				<div id="sound-unmute"></div>
+				<div id="play"></div>
+				<div id="pause"></div>
+			</div>
+			<div id="paper"></div>
+			<iframe id="iframe" src="pages/page1.html"></iframe>
+			<div id="mrlee"></div>
+			<div id="previous"></div>
+			<div id="next"></div>
+		</div>			
+	</section>
+	<footer>
+		<div class="wrapper">
+			<div class="footer-copyright">© Cognizant 2015</div>
+			<div class="footer-logo">
+			</div>
+		</div>
+
+	</footer>
+</body>
+<script>
+	document.querySelector('.elearning-content').style.height = document.querySelector('aside.chapters').offsetHeight + "px";
+	/*window.onresize = function() {
+		document.querySelector('.elearning-content').style.height = document.querySelector('aside.chapters').offsetHeight + "px";
+	}*/
+</script>
+
+<script type="text/javascript" src="js/main.js"></script>
+</html>
