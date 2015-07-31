@@ -61,6 +61,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+nav {
+    height: 736px;
+    background-color: rgba(51, 51, 51, 0.7);
+}
+
 /*reset end*/
 header#header{
 	display: block;
@@ -92,8 +98,8 @@ section aside header{
   line-height: 1em;
   background-color: rgb(51, 51, 51);
   padding-right: 5px;
-  padding-top: 9px;
-  padding-bottom: 2px;
+  padding-top: 6px;
+  padding-bottom: 5px;
   text-align: right;
 }
 section aside.chapters {
@@ -101,6 +107,7 @@ section aside.chapters {
   display: block;
   float: right;
   width: 17%;
+  height: 759px;
   border: 2px solid rgba(255, 255, 255, 0.5);
 
 }
@@ -115,7 +122,6 @@ nav a{
   line-height: 100px;
   text-decoration: none;
   color: #546E7A;
-  background-color: rgba(51, 51, 51, 0.7);
   pointer-events: none;
 }
 nav a span{
@@ -127,25 +133,51 @@ nav a span{
   border: 2px solid #333;
   background-color: rgb(224, 224, 224);
   pointer-events: auto;
+  opacity: .8;
 }
 
 nav a span.done{
   border: 2px solid #00FF00;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgb(82, 236, 93);
+  opacity: 1;
 }
 
-nav a:nth-child(1) span{}
-nav a:nth-child(2) span{}
-nav a:nth-child(3) span{}
-nav a:nth-child(4) span{}
-nav a:nth-child(5) span{}
-nav a:nth-child(6) span{}
-nav a:nth-child(7) span{}
-nav a:nth-child(8) span{}
+nav a:nth-child(1) span{background: url("../images/thumbm01c01.png");
+                        background-repeat: no-repeat;
+                        background-size: 132px auto;}
+nav a:nth-child(2) span{background: url("../images/thumbm01c02.png");
+                        background-repeat: no-repeat;
+                        background-size: 132px auto;}
+nav a:nth-child(3) span{background: url("../images/thumbm01c03.png");
+                        background-repeat: no-repeat;
+                        background-size: 132px auto;}
+nav a:nth-child(4) span{background: url("../images/thumbm01c04.png");
+                        background-repeat: no-repeat;
+                        background-size: 132px auto;}
+nav a:nth-child(5) span{background: url("../images/thumbm01c05.png");
+                        background-repeat: no-repeat;
+                        background-size: 132px auto;}
+nav a:nth-child(6) span{background: url("../images/thumbm01c06.png");
+                        background-repeat: no-repeat;
+                        background-size: 132px auto;}
+nav a:nth-child(7) span{background: url("../images/thumbm01c07.png");
+                        background-repeat: no-repeat;
+                        background-size: 132px auto;}
+nav a:nth-child(8) span{background: url("../images/thumbm01c08.png");
+                        background-repeat: no-repeat;
+                        background-size: 132px auto;}
+
+nav a:nth-child(1) span img{
+  opacity: 0;
+}
 
 nav a p{
   font-size: 2em;
+}
+
+nav a span img.selected {
+  opacity: 0;
 }
 
 nav a span.selected {
@@ -154,6 +186,7 @@ nav a span.selected {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgb(82, 145, 236);
   pointer-events: none;
   cursor: pointer;
+  opacity: 1;
 }
 
 nav a.selected {
@@ -171,7 +204,7 @@ section .elearning-content .controls{
   position: absolute;
   top: 693px;
   left: 45px;
-  width: 723px;
+  width: 745px;
   height: 50px;
   background: #000;
   z-index: 1000;
@@ -199,7 +232,7 @@ section .elearning-content .controls{
 
 .controls .progress #progress-page{
   position: absolute;
-  left: 568px;
+  left: 586px;
   width: 7%;
   height: 37px;
   border: solid 2px #666;
@@ -213,7 +246,7 @@ section .elearning-content .controls{
 
 .controls #sound-mute{
   position: absolute;
-  left: 669px;
+  left: 689px;
   width: 37px;
   height: 37px;
   margin: 7px;
@@ -221,12 +254,11 @@ section .elearning-content .controls{
   background-size: 37px 37px;
   cursor: pointer;
   visibility: visible;
-  pointer-events: none;
 }
 
 .controls #sound-unmute{
   position: absolute;
-  left: 669px;
+  left: 689px;
   width: 37px;
   height: 37px;
   margin: 7px;
@@ -234,15 +266,14 @@ section .elearning-content .controls{
   background-size: 37px 37px;
   cursor: pointer;
   visibility: hidden;
-  pointer-events: auto;
 }
 
 #next{
   position: absolute;
-  left: 680px;
-  top: 66px;
-  width: 108px;
-  height: 67px;
+  left: 743px;
+  top: 131px;
+  width: 88px;
+  height: 55px;
   margin: 7px;
   background: url("../images/next.png");
   background-size: 85px auto;
@@ -252,10 +283,10 @@ section .elearning-content .controls{
 
 #previous{
   position: absolute;
-  left: 35px;
-  top: 66px;
-  width: 108px;
-  height: 67px;
+  left: -6px;
+  top: 131px;
+  width: 88px;
+  height: 55px;
   margin: 7px;
   background: url("../images/prev.png");
   background-size: 85px auto;
@@ -265,7 +296,7 @@ section .elearning-content .controls{
 
 .controls #play{
   position: absolute;
-  left: 623px;
+  left: 642px;
   top: 0px;
   width: 37px;
   height: 37px;
@@ -273,12 +304,12 @@ section .elearning-content .controls{
   background: url("../images/play_button.png");
   background-size: 37px 37px;
   cursor: pointer;
-  display: none;
+  visibility: visible;
 }
 
 .controls #pause{
   position: absolute;
-  left: 623px;
+  left: 642px;
   top: 0px;
   width: 37px;
   height: 37px;
@@ -286,6 +317,7 @@ section .elearning-content .controls{
   background: url("../images/pause_button.png");
   background-size: 37px 37px;
   cursor: pointer;
+  visibility: visible;
 }
 
 .content{
@@ -328,11 +360,6 @@ footer .footer-logo {
   line-height: 1em;
 }
 
-nav a span.selected:hover{
-	color: #fff;
-  background: #6EC0D3;
-}
-
 nav a:hover{
 	color: #fff;
   background: rgba(110, 192, 211, 0.38)
@@ -340,19 +367,33 @@ nav a:hover{
 
 iframe{
   position: relative;
-  width: 94%;
+  width: 119%;
   height: 94%;
   margin: 20px;
-  margin-left: 47px;
+  margin-top: 54px;
+  margin-left: 50px;
+  -webkit-transform: scale(0.81);
+  -moz-transform: scale(0.81);
+  -ms-transform: scale(0.81);
+  -o-transform: scale(0.81);
+  transform: scale(0.81);
+  -webkit-transform-origin:  0 0;
+  -moz-transform-origin:  0 0;
+  -ms-transform-origin:  0 0;
+  -o-transform-origin:  0 0;
+  transform-origin:  0 0; 
+  overflow: hidden;
+
 }
 
 #paper{
   position: absolute;
-  left: 18px;
-  top: 76px;
-  width: 768px;
-  height: 669px;
-  background: url("../images/bgpaper.png");
+  left: 7px;
+  top: 73px;
+  width: 820px;
+  height: 630px;
+  background: url("../images/bgpapers.png");
+  background-size: 820px 630px;
   background-repeat: no-repeat;
 }
 
@@ -367,6 +408,37 @@ iframe{
   background-size: 614px auto;
   pointer-events: none;
   display: none;
+}
+
+#pointer{
+  position: absolute;
+  left: 780px;
+  top: 168px;
+  width: 70px;
+  height: 70px;
+  background: url("../images/hand-pointer.png");
+  background-repeat: no-repeat;
+  background-size: 70px auto;
+  pointer-events: none;
+  display: none;
+  -webkit-animation: scaleInOut 1s 0s infinite;
+  -moz-animation: scaleInOut 1s 0s infinite;
+  -ms-animation: scaleInOut 1s 0s infinite;
+  -o-animation: scaleInOut 1s 0s infinite;
+  animation: scaleInOut 1s 0s infinite;
+}
+
+#closeX{
+  position: absolute;
+  left: 942px;
+  top: 0px;
+  width: 80px;
+  height: 27px;
+  background: url("../images/close.png");
+  background-repeat: no-repeat;
+  background-size: 80px auto;
+  border: 1px solid rgb(128, 128, 128);
+  cursor: pointer;
 }
 
 .animationFadein{
@@ -398,6 +470,7 @@ iframe{
   animation: fadeOutLeft 1s 0s;
 
 }
+
 
 @-webkit-keyframes fadeIn {
 0% {
@@ -441,52 +514,366 @@ iframe{
 
 @-webkit-keyframes fadeInLeft {
 0% {
-    -webkit-transform:translateX(150px);
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    -ms-transform: translateX(150px);
+    -o-transform: translateX(150px);
+    transform: translateX(150px);
 }
 
 50% {
-    -webkit-transform:translateX(-50px);
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -o-transform: translateX(-50px);
+    transform: translateX(-50px);
 }
 
 100% {
-    -webkit-transform:translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+}
+
+@-moz-keyframes fadeInLeft {
+0% {
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    -ms-transform: translateX(150px);
+    -o-transform: translateX(150px);
+    transform: translateX(150px);
+}
+
+50% {
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -o-transform: translateX(-50px);
+    transform: translateX(-50px);
+}
+
+100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+}
+
+@-ms-keyframes fadeInLeft {
+0% {
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    -ms-transform: translateX(150px);
+    -o-transform: translateX(150px);
+    transform: translateX(150px);
+}
+
+50% {
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -o-transform: translateX(-50px);
+    transform: translateX(-50px);
+}
+
+100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+}
+
+@-o-keyframes fadeInLeft {
+0% {
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    -ms-transform: translateX(150px);
+    -o-transform: translateX(150px);
+    transform: translateX(150px);
+}
+
+50% {
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -o-transform: translateX(-50px);
+    transform: translateX(-50px);
+}
+
+100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
 }
 }
 
 @keyframes fadeInLeft {
 0% {
-    -webkit-transform:translateX(150px);
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    -ms-transform: translateX(150px);
+    -o-transform: translateX(150px);
+    transform: translateX(150px);
 }
 
 50% {
-    -webkit-transform:translateX(-50px);
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -o-transform: translateX(-50px);
+    transform: translateX(-50px);
 }
 
 100% {
-    -webkit-transform:translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
 }
 }
 
 @-webkit-keyframes fadeOutLeft {
 0% {
     opacity: 1;
-    -webkit-transform:translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
 }
 
 100% {
     opacity: 0;
-    -webkit-transform:translateX(150px);
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    -ms-transform: translateX(150px);
+    -o-transform: translateX(150px);
+    transform: translateX(150px);
+}
+}
+
+@-moz-keyframes fadeOutLeft {
+0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+100% {
+    opacity: 0;
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    -ms-transform: translateX(150px);
+    -o-transform: translateX(150px);
+    transform: translateX(150px);
+}
+}
+
+@-ms-keyframes fadeOutLeft {
+0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+100% {
+    opacity: 0;
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    -ms-transform: translateX(150px);
+    -o-transform: translateX(150px);
+    transform: translateX(150px);
+}
+}
+
+@-o-keyframes fadeOutLeft {
+0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+100% {
+    opacity: 0;
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    -ms-transform: translateX(150px);
+    -o-transform: translateX(150px);
+    transform: translateX(150px);
 }
 }
 
 @keyframes fadeOutLeft {
 0% {
     opacity: 1;
-    -webkit-transform:translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
 }
 
 100% {
     opacity: 0;
-    -webkit-transform:translateX(150px);
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    -ms-transform: translateX(150px);
+    -o-transform: translateX(150px);
+    transform: translateX(150px);
+}
+}
+
+@-webkit-keyframes scaleInOut {
+0% {
+    
+    -webkit-transform: scale3d(.8,.8,.8);
+    -moz-transform: scale3d(.8,.8,.8);
+    -ms-transform: scale3d(.8,.8,.8);
+    -o-transform: scale3d(.8,.8,.8);
+    transform: scale3d(.8,.8,.8);
+}
+
+50% {
+    -webkit-transform: scale3d(1,1,1);
+    -moz-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    -o-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+
+100% {
+    -webkit-transform: scale3d(.8,.8,.8);
+    -moz-transform: scale3d(.8,.8,.8);
+    -ms-transform: scale3d(.8,.8,.8);
+    -o-transform: scale3d(.8,.8,.8);
+    transform: scale3d(.8,.8,.8);
+}
+}
+
+@-moz-keyframes scaleInOut {
+0% {
+    
+    -webkit-transform: scale3d(.8,.8,.8);
+    -moz-transform: scale3d(.8,.8,.8);
+    -ms-transform: scale3d(.8,.8,.8);
+    -o-transform: scale3d(.8,.8,.8);
+    transform: scale3d(.8,.8,.8);
+}
+
+50% {
+    -webkit-transform: scale3d(1,1,1);
+    -moz-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    -o-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+
+100% {
+    -webkit-transform: scale3d(.8,.8,.8);
+    -moz-transform: scale3d(.8,.8,.8);
+    -ms-transform: scale3d(.8,.8,.8);
+    -o-transform: scale3d(.8,.8,.8);
+    transform: scale3d(.8,.8,.8);
+}
+}
+
+@-ms-keyframes scaleInOut {
+0% {
+    
+    -webkit-transform: scale3d(.8,.8,.8);
+    -moz-transform: scale3d(.8,.8,.8);
+    -ms-transform: scale3d(.8,.8,.8);
+    -o-transform: scale3d(.8,.8,.8);
+    transform: scale3d(.8,.8,.8);
+}
+
+50% {
+    -webkit-transform: scale3d(1,1,1);
+    -moz-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    -o-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+
+100% {
+    -webkit-transform: scale3d(.8,.8,.8);
+    -moz-transform: scale3d(.8,.8,.8);
+    -ms-transform: scale3d(.8,.8,.8);
+    -o-transform: scale3d(.8,.8,.8);
+    transform: scale3d(.8,.8,.8);
+}
+}
+
+@-o-keyframes scaleInOut {
+0% {
+    
+    -webkit-transform: scale3d(.8,.8,.8);
+    -moz-transform: scale3d(.8,.8,.8);
+    -ms-transform: scale3d(.8,.8,.8);
+    -o-transform: scale3d(.8,.8,.8);
+    transform: scale3d(.8,.8,.8);
+}
+
+50% {
+    -webkit-transform: scale3d(1,1,1);
+    -moz-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    -o-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+
+100% {
+    -webkit-transform: scale3d(.8,.8,.8);
+    -moz-transform: scale3d(.8,.8,.8);
+    -ms-transform: scale3d(.8,.8,.8);
+    -o-transform: scale3d(.8,.8,.8);
+    transform: scale3d(.8,.8,.8);
+}
+}
+
+@keyframes scaleInOut {
+0% {
+    
+    -webkit-transform: scale3d(.8,.8,.8);
+    -moz-transform: scale3d(.8,.8,.8);
+    -ms-transform: scale3d(.8,.8,.8);
+    -o-transform: scale3d(.8,.8,.8);
+    transform: scale3d(.8,.8,.8);
+}
+
+50% {
+    
+    -webkit-transform: scale3d(1,1,1);
+    -moz-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    -o-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+
+100% {
+    -webkit-transform: scale3d(.8,.8,.8);
+    -moz-transform: scale3d(.8,.8,.8);
+    -ms-transform: scale3d(.8,.8,.8);
+    -o-transform: scale3d(.8,.8,.8);
+    transform: scale3d(.8,.8,.8);
 }
 }

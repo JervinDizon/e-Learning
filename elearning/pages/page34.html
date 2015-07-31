@@ -1,122 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<style>
-		body{
-			margin: 0;
-			padding: 0;
-		}
-		.container{
-			position: absolute;
-			left: 0;
-			width: 721px;
-			height: 628px;
-			background: url("../images/page33.jpg");
-			background-repeat: no-repeat;
-			background-position: center;
-			overflow: hidden;
-		}
-		.answer{    
-			display: block;
-	    width: 62%;
-	    height: 19px;
-	    margin-left: 29%;
-	    margin-right: 11%;
-	    margin-bottom: 1px;
-	    cursor: pointer;
-	    border-radius: 3px;
-		}
-		.answer:nth-child(1){
-			margin-top: 317px;;
-		}
-
-		.answer.correct.clicked{
-			background-color: rgba(139,195,74,0.3);
-			border: 1px solid rgba(139,195,74,1);
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-	    cursor: default;
-		}
-		.answer.clicked{
-			background-color: rgba(229,57,53,0.3);
-			border: 1px solid rgba(229,57,53,1);
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-	    cursor: default;
-		}
-		#dialogbox{
-			display: none;
-			background-color: rgba(127, 188, 97, 0.55);
-		    border: 1px solid rgb(102, 170, 94);
-		    -webkit-box-sizing: border-box;
-		    -moz-box-sizing: border-box;
-		    box-sizing: border-box;
-			-webkit-border-radius: 9px;
-			-moz-border-radius: 9px;
-			border-radius: 9px;
-		    cursor: default;
-		    width: 300px;
-		    height: 50px;
-		    position: absolute;
-		    overflow: hidden;
-		    top: 480px;
-		    margin-left: 30%;
-		}
-		#dialogTxt{
-			
-		    cursor: default;
-		    height: 50px;
-		    text-align: center;
-		    padding-top: 15px;
-
-		
-		}
-	</style>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/quiz.css">
 </head>
-	<body>	
-		<div class="container">
+<body>
+	<div class="main">
 
-		</div>
+		<header>
+			<div class="quiztitle">
+				<h1>Quiz</h1>
+			</div>
+		</header>
+
+			<div class="container">
+
+					<h2>Rensuer is an academic organization which has publishing thousands of books and manuals every year.
+					The organization is very successful. What is the success factor in the Rensuer selling concept?</h2>
+					<table cellspacing='10' style="width:80%">
+					<tr>
+						<td style="width:5%">a</td>
+						<td>Focus, Knowledge, Evaluation and Decision</td>
+					</tr>
+					<tr>
+						<td>b</td>
+						<td>Recognition, Information, Evaluation and Product</td>
+					</tr>
+					<tr>
+						<td>c</td>
+						<td>Brand, Product , Information and Evaluation</td>
+					</tr>
+					<tr>
+						<td>d</td>
+						<td>Knowledge, Decision, Brand and Focus</td>
+					</tr>
+				</table>
+			</div>
 		<div id = "dialogbox">
-		<div id = "dialogTxt"></div>
+			<div id = "dialogTxt"></div>
 		</div>
 
 	</body>
-	<script>
-		(function(){
-			var content = "",
-				answer = 1;
-			for (var i = 1; i <= 4; i++) { 
-		    content += (i == answer)?"<div class='answer correct'></div>":"<div class='answer'></div>";
-			}
-			document.querySelector('#dialogTxt').innerHTML = "Answer a";
-			document.querySelector('.container').innerHTML = content;
-			document.querySelector('.container').addEventListener('click',multichoices);
-
-		function multichoices(e){
-
-				switch(e.target.getAttribute('class')) {
-			    case 'question answer':
-						e.target.style.pointerEvents = "none";
-
-						
-			      break;
-			     case 'answer correct':
-			     	
-						e.target.classList.add('clicked');
-						document.querySelector('#dialogbox').style.display = "block";
-
-			    
-			      break;					
-			    default:
-						e.target.classList.add('clicked');
-				}
-			}
-		})();
-
-	</script>
-</html>
+</body>
