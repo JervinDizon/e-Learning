@@ -2,48 +2,31 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>quiz</title>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/quiz.css">
+	<link href='css/quiz.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="main">
-
-		<header>
-			<div class="quiztitle">
-				<h1>Quiz</h1>
-			</div>
-		</header>
-		
-			<div class="container">
-
-					<h2>Paul works for Indus Marketing Solution for more than 5 years and is the senior most marketing lead. He designs the selling strategies for the organization for any new product launch.<br>
-
-					Paul has now a new team and a new product launched for sale. What is the Sales technique that Paul will reiterate the new team for successful sales?</h2>
-					<table cellspacing='10' style="width:80%">
-					<tr>
-						<td style="width:5%">a</td>
-						<td>Opening, Reinforcement, Meeting Planning, Gaining Commitment</td>
-					</tr>
-					<tr>
-						<td>b</td>
-						<td>Pre Meet Planning, Opening, Probing, Reinforce and Gaining Commitment</td>
-					</tr>
-					<tr>
-						<td>c</td>
-						<td>Pre Meet planning, Opening, Reinforce, Probing and Gaining Commitment</td>
-					</tr>
-					<tr>
-						<td>d</td>
-						<td>Opening, Meeting Planning, Gaining Commitment and Reinforcement</td>
-					</tr>
-				</table>
-			</div>
-		
-		<div id = "dialogbox">
-			<div id = "dialogTxt"></div>
+	<div class="container">
+		<h1>Quiz</h1>
+		<h2 class="question"></h2>
+		<div class="choices">
 		</div>
-
-	</body>
+		<div class="message hide" id="message">Message</div>
+	</div>
 </body>
+<script>
+	var quiz = {
+		"question": "Paul works for Indus Marketing Solution for more than 5 years and is the senior most marketing lead. He designs the selling strategies for the organization for any new product launch.<br>Paul has now a new team and a new product launched for sale. What is the Sales technique that Paul will reiterate the new team for successful sales?",
+		"choices": {
+			"1": "Focus, Knowledge, Evaluation and Decision",
+			"2": "Recognition, Information, Evaluation and Product",
+			"3": "Brand, Product , Information and Evaluation",
+			"4": "Knowledge, Decision, Brand and Focus"
+		},
+		"answer":"2"
+	};
+</script>
+<script type="text/javascript" src="js/quiz.js"></script>
+</html>

@@ -16,6 +16,7 @@ var totalChapters = 8,//change to total chapters
 	isPlaying,
 	changeChapter = false,
 	pageEnd = false,
+	isQuiz = false,
 	aud = new Audio();
 
 //Element Variables

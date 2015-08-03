@@ -2,47 +2,30 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>quiz</title>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/quiz.css">
+	<link href='css/quiz.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="main">
-
-		<header>
-			<div class="quiztitle">
-				<h1>Quiz</h1>
-			</div>
-		</header>
-		
-			<div class="container">
-						<h2>Mauly has newly joined the sales team of Cinos Academy and Research Unit. Mauly is provided with a sales brochure that details the features, advantages and benefits of the Product of sale.
-							<br>
-						Mauly prepares for the first customer meeting. The next day, during customer meeting, Mauly demonstrates the product only with the help of sales brochure.
-							<br>		
-						Is Mauly having a right approach in Sales?</h2>
-					<table cellspacing='10' style="width:80%">
-					<tr>
-						<td style="width:5%">a</td>
-						<td>Yes</td>
-					</tr>
-					<tr>
-						<td>b</td>
-						<td>No</td>
-					</tr>
-					<tr>
-						<td>c</td>
-						<td>Maybe</td>
-					</tr>
-<!-- 					<tr>
-						<td>d</td>
-						<td>Arguing</td>
-					</tr> -->
-				</table>
-			</div>
-		
-		<div id = "dialogbox">
-			<div id = "dialogTxt"></div>
+	<div class="container">
+		<h1>Quiz</h1>
+		<h2 class="question"></h2>
+		<div class="choices">
 		</div>
+		<div class="message hide" id="message">Message</div>
+	</div>
 </body>
+<script>
+	var quiz = {
+		"question": "Mauly has newly joined the sales team of Cinos Academy and Research Unit. Mauly is provided with a sales brochure that details the features, advantages and benefits of the Product of sale.<br><br>Mauly prepares for the first customer meeting. The next day, during customer meeting, Mauly demonstrates the product only with the help of sales brochure.<br><br>Is Mauly having a right approach in Sales?",
+		"choices": {
+			"1": "Yes",
+			"2": "No",
+			"3": "Maybe"
+		},
+		"answer":"2"
+	};
+</script>
+<script type="text/javascript" src="js/quiz.js"></script>
+</html>

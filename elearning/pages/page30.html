@@ -2,46 +2,31 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>quiz</title>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/quiz.css">
+	<link href='css/quiz.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="main">
-
-		<header>
-			<div class="quiztitle">
-				<h1>Quiz</h1>
-			</div>
-		</header>
-		
-			<div class="container">
-
-					<h2>Silverstone is a leading Steel Industry firm established well for the last 10 years. The company Manager Mike is the decision maker for any new product use. Michael, the senior sales representative meets Mike to sell his new product launched by his organization.
-					Michael has a good meeting with Mike. What will be Mike’s decision thoughts-–</h2>
-					<table cellspacing='10' style="width:80%">
-					<tr>
-						<td style="width:5%">a</td>
-						<td>Understanding Product</td>
-					</tr>
-					<tr>
-						<td>b</td>
-						<td>Favorable to his company</td>
-					</tr>
-					<tr>
-						<td>c</td>
-						<td>Brand preference</td>
-					</tr>
-					<tr>
-						<td>d</td>
-						<td>All of the above</td>
-					</tr>
-				</table>
-			</div>
-		<div id = "dialogbox">
-			<div id = "dialogTxt"></div>
+	<div class="container">
+		<h1>Quiz</h1>
+		<h2 class="question"></h2>
+		<div class="choices">
 		</div>
-
-	</body>
+		<div class="message hide" id="message">Message</div>
+	</div>
 </body>
+<script>
+	var quiz = {
+		"question": "Silverstone is a leading Steel Industry firm established well for the last 10 years. The company Manager Mike is the decision maker for any new product use. Michael, the senior sales representative meets Mike to sell his new product launched by his organization.<br>Michael has a good meeting with Mike. What will be Mike's decision thoughts?",
+		"choices": {
+			"1": "Understanding Product",
+			"2": "Favorable to his company",
+			"3": "Brand preference",
+			"4": "All of the above"
+		},
+		"answer":"4"
+	};
+</script>
+<script type="text/javascript" src="js/quiz.js"></script>
+</html>

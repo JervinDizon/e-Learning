@@ -2,48 +2,31 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>quiz</title>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/quiz.css">
+	<link href='css/quiz.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="main">
-
-		<header>
-			<div class="quiztitle">
-				<h1>Quiz</h1>
-			</div>
-		</header>
-		
-			<div class="container">
-
-					<h2>Minos is the sales representative with a first time customer. He has had a 10 minute conversation explaining the  new product to the  Michael, the proprietor of the company. During his conversation, Minos provides  certain direct expressions to  Michael like “ Absolutely “, “That’s a good point”, “Exactly” etc.<br>
-
-					What step of selling is Minos iterating to Michael?</h2>
-					<table cellspacing='10' style="width:80%">
-					<tr>
-						<td style="width:5%">a</td>
-						<td>Probing</td>
-					</tr>
-					<tr>
-						<td>b</td>
-						<td>Gaining Commitment</td>
-					</tr>
-					<tr>
-						<td>c</td>
-						<td>Reinforcement</td>
-					</tr>
-					<tr>
-						<td>d</td>
-						<td>Arguing</td>
-					</tr>
-				</table>
-			</div>
-		
-		<div id = "dialogbox">
-			<div id = "dialogTxt"></div>
+	<div class="container">
+		<h1>Quiz</h1>
+		<h2 class="question"></h2>
+		<div class="choices">
 		</div>
-
-	</body>
+		<div class="message hide" id="message">Message</div>
+	</div>
 </body>
+<script>
+	var quiz = {
+		"question": "Minos is the sales representative with a first time customer. He has had a 10 minute conversation explaining the  new product to the  Michael, the proprietor of the company. During his conversation, Minos provides certain direct expressions to  Michael like &quot Absolutely &quot, &quotThat&apos;s a good point&quot, &quotExactly&quot etc.",
+		"choices": {
+			"1": "Probing",
+			"2": "Gaining Commitment",
+			"3": "Reinforcement",
+			"4": "Arguing"
+		},
+		"answer":"3"
+	};
+</script>
+<script type="text/javascript" src="js/quiz.js"></script>
+</html>

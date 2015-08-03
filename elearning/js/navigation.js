@@ -1,3 +1,5 @@
+
+
 function nextPage() {
 	if(currentChapter == totalChapters && currentChapterPage[currentChapter-1] == pagesPerChapter[currentChapter-1]+1){console.log("end of slide");return};
 	for (var e = 0; e < totalChapters; e++) { 
@@ -135,6 +137,7 @@ function selectedPage(e){
 }
 
 function callingMrLee(){
+	isQuiz = true;
 	if(document.getElementById("mrlee").style.display == "block"){return;};
 	document.getElementById("mrlee").style.display = "block";
 	document.getElementById("mrlee").classList.add("animationFadeLeft");
@@ -144,6 +147,7 @@ function callingMrLee(){
 }
 
 function exitMrLee(){
+	isQuiz = false;
 	if(document.getElementById("mrlee").style.display == "block"){
 		document.getElementById('mrlee').classList.add("animationFadeOutLeft");
 		setTimeout(function(){
@@ -205,3 +209,11 @@ function closeWindow(){
 closeX.addEventListener("click",closeWindow);
 
 loadScript("js/soundControls.js", jsLoaded);
+
+window.onmessage = function(e){
+    if (e.data == 'correct') {
+    	aud.src = 'audio/correct.mp3';
+    	aud.play();
+        disableControls();
+    }
+};

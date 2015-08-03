@@ -2,45 +2,31 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>quiz</title>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/quiz.css">
+	<link href='css/quiz.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="main">
-
-		<header>
-			<div class="quiztitle">
-				<h1>Quiz</h1>
-			</div>
-		</header>
-			<div class="container">
-					<h2>Paul visits the customer for the second time for the product sale. The customer is holding a manufacturing firm and likes to know more about the product. Paul should focus his discussion around?
-					</h2>
-					<table cellspacing='10' style="width:80%">
-					<tr>
-						<td style="width:5%">a</td>
-						<td>Explaining about current trends of Manufacturing Industry</td>
-					</tr>
-					<tr>
-						<td>b</td>
-						<td>Talking about the product for sale</td>
-					</tr>
-					<tr>
-						<td>c</td>
-						<td>Helping customer on the product benefits and advantages for his line of manufacturing business</td>
-					</tr>
-					<tr>
-						<td>d</td>
-						<td>None of the above</td>
-					</tr>
-				</table>
-			</div>
-		
-		<div id = "dialogbox">
-			<div id = "dialogTxt"></div>
+	<div class="container">
+		<h1>Quiz</h1>
+		<h2 class="question"></h2>
+		<div class="choices">
 		</div>
-
+		<div class="message hide" id="message">Message</div>
+	</div>
 </body>
+<script>
+	var quiz = {
+		"question": "Paul visits the customer for the second time for the product sale. The customer is holding a manufacturing firm and likes to know more about the product. Paul should focus his discussion around?",
+		"choices": {
+			"1": "Explaining about current trends of Manufacturing Industry",
+			"2": "Talking about the product for sale",
+			"3": "Helping customer on the product benefits and advantages for his line of manufacturing business",
+			"4": "None of the above"
+		},
+		"answer":"3"
+	};
+</script>
+<script type="text/javascript" src="js/quiz.js"></script>
 </html>
