@@ -212,7 +212,7 @@ loadScript("js/soundControls.js", jsLoaded);
 
 window.onmessage = function(e){
     if (e.data == 'correct') {
-    	aud.src = 'audio/correct.mp3';
+    	aud.src = (currentChapter == totalChapters) ? 'audio/correct_Final.mp3' : 'audio/correct.mp3';
     	aud.play();
         disableControls();
     }
