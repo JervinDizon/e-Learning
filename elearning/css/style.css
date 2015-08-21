@@ -1006,6 +1006,14 @@ iframe{
 }
 }
 
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@-moz-keyframes counterSpin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes counterSpin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes counterSpin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
 @-webkit-keyframes barAnim {
   from {background-position-x: 0px;};
   to {background-position-x: 1000px;};
@@ -1031,10 +1039,5 @@ iframe{
   to {background-position-x: 1000px;};
 }
 
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-@-moz-keyframes counterSpin { 100% { -moz-transform: rotate(-360deg); } }
-@-webkit-keyframes counterSpin { 100% { -webkit-transform: rotate(-360deg); } }
-@keyframes counterSpin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+

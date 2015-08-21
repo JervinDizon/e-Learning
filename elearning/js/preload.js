@@ -1,5 +1,7 @@
 "use strict";
 (function(){
+	var currentProgress;
+
 	var Preload = function(path) {
 		this.path = path;
 		this.queue = new createjs.LoadQueue(true);
@@ -65,16 +67,6 @@
 
 	Preload.prototype.onComplete = function(event){
 		 //console.log('Complete', event);
-		setTimeout(function(){
-			document.querySelector('.main-wrapper').style.top = "0";
-			document.querySelector('.main-wrapper').classList.add("animationFadein");
-			document.querySelector('.preloader').style.display = "none";
-			var head = document.getElementsByTagName('head')[0];
-			var script = document.createElement('script');
-			script.type = 'text/javascript';
-			script.src = 'js/variables.js';
-			head.appendChild(script);
-		},1000)
 	};
 
 	Preload.prototype.onError = function(event){
@@ -91,17 +83,35 @@
 
 	Preload.prototype.onProgress = function(event){
 		// console.log(Math.round(event.loaded * 100));
-		event.loaded = event.loaded * 2;
+		currentProgress = event.loaded * 1.5;
+		console.log(Math.round(currentProgress * 100));
 		var anim = "";
 			anim += "-webkit-transition: width 500ms ease-in-out;";
 			anim += "-moz-transition: width 500ms ease-in-out;";
 			anim += "transition: width 500ms ease-in-out;";
-			anim += "width: " + Math.round(event.loaded * 50) + "%;";
-		document.querySelector('.preloader .progress-bar .progress').style.cssText = anim;
-		document.querySelector('.preloader .progress-bar .progress').style.width = Math.round(event.loaded * 50) + "%";
-		document.querySelector('.preloader .progress-bar .progress-text').innerHTML = "Intitializing Content... " + Math.round(event.loaded * 50) + "%";
+			anim += "width: " + Math.round(currentProgress * 100) + "%;";
+		if(Math.round(currentProgress * 100) <= 100){
+			document.querySelector('.preloader .progress-bar .progress').style.cssText = anim;
+			document.querySelector('.preloader .progress-bar .progress').style.width = Math.round(currentProgress * 100) + "%";
+			document.querySelector('.preloader .progress-bar .progress-text').innerHTML = "Initializing Content... " + Math.round(currentProgress * 100) + "%";
+		}else if(Math.round(currentProgress * 100) == 101){
+			preload.showContent();
+		}
 		// document.querySelector('.preloader .progress-bar .progress').innerHTML = Math.round(event.loaded * 100);
 	};
+
+	Preload.prototype.showContent = function(){
+		setTimeout(function(){
+			document.querySelector('.main-wrapper').style.top = "0";
+			document.querySelector('.main-wrapper').classList.add("animationFadein");
+			document.querySelector('.preloader').style.display = "none";
+			var head = document.getElementsByTagName('head')[0];
+			var script = document.createElement('script');
+			script.type = 'text/javascript';
+			script.src = 'js/variables.js';
+			head.appendChild(script);
+		},1000)
+	}
 
 	 var preload = new Preload("http://jervindizon.github.io/elearning/");
 	//var preload = new Preload("");
