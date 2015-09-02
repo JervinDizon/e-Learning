@@ -21,7 +21,7 @@ function nextPage() {
 		progressPage.innerHTML = (currentpage + 1).toString() + "/" +pagesPerChapter[currentChapter-1];
 		currentChapterPage[currentChapter-1]++;		
 	}else{
-		console.log("      " + currentChapterPage[currentChapter-1]);
+		document.querySelector('nav a:nth-child(1) span').style.pointerEvents = "";
 		if(currentChapter > 2){var pageCurrent = pagesPerChapter[currentChapter-2]+1}else{var pageCurrent = pagesPerChapter[currentChapter-2]}
 		if(currentChapterPage[currentChapter-2] == pageCurrent){
 			changeChapter = false;
@@ -180,6 +180,7 @@ function checkProgress(clicked){
 			if(progressPage.innerHTML == ((pageOfQuiz[currentChapter-1] + "/" + pagesPerChapter[currentChapter-1])) && (pageOfQuiz[currentChapter-1] !=0)){
 				callingMrLee()
 			}else{
+				console.log((pageOfQuiz[currentChapter-1]+1) + "/" + pagesPerChapter[currentChapter-1])
 				if(progressPage.innerHTML == ((pageOfQuiz[currentChapter-1]+1) + "/" + pagesPerChapter[currentChapter-1]) && (pageOfQuiz[currentChapter-1] !=0)){
 					callingMrLee();
 					if(currentChapter == 1){

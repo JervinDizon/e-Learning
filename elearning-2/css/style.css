@@ -34,17 +34,17 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	background-color: #EEEEEE;
-    overflow-x: hidden;
-    width:  1024px; 
-    height: 768px;
-    background: url("../images/background_final.png");
-    background-repeat: no-repeat;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  overflow: hidden;
+  width:  1024px; 
+  height: 768px;
+  background: url("../images/background_final.png");
+  background-repeat: no-repeat;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 ol, ul {
 	list-style: none;
@@ -63,11 +63,139 @@ table {
 }
 
 nav {
-    height: 736px;
-    background-color: rgba(51, 51, 51, 0.7);
+  height: 736px;
+  background-color: rgba(51, 51, 51, 0.7);
 }
 
 /*reset end*/
+.main-wrapper{
+  position: relative;
+  top: 99999px;
+}
+.preloader{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.preloader .loading-gears{
+  left: 0;
+  right: 0;
+  margin-top: 200px;
+  width: 256px;
+  height: 152px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.preloader .loading-gears .gE{
+  position: absolute;
+  margin-left: 115px;
+  width: 140px;
+  height: 140px;
+  background: url(../images/gear01_e.png);
+  background-size: 140px auto;
+}
+
+.preloader .loading-gears .g1{
+  position: absolute;
+  margin-left: 115px;
+  width: 140px;
+  height: 140px;
+  background: url(../images/gear01.png);
+  background-size: 140px auto;
+  -webkit-animation:spin 3s linear infinite;
+  -moz-animation:spin 3s linear infinite;
+  animation:spin 3s linear infinite;
+}
+
+.preloader .loading-gears .g2{
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 81px;
+  width: 43px;
+  height: 43px;
+  background: url(../images/gear02.png);
+  background-size: 43px auto;
+  -webkit-animation:spin 3s linear infinite;
+  -moz-animation:spin 3s linear infinite;
+  animation:spin 3s linear infinite;
+}
+
+.preloader .loading-gears .g3{
+  position: absolute;
+  margin-top: 57px;
+  margin-left: 40px;
+  width: 80px;
+  height: 80px;
+  background: url(../images/gear03.png);
+  background-size: 80px auto;
+  -webkit-animation:counterSpin 3s linear infinite;
+  -moz-animation:counterSpin 3s linear infinite;
+  animation:counterSpin 3s linear infinite;
+}
+
+.preloader .loading-gears .g4{
+  position: absolute;
+  margin-top: 88px;
+  width: 43px;
+  height: 43px;
+  background: url(../images/gear04.png);
+  background-size: 43px auto;
+  -webkit-animation:spin 3s linear infinite;
+  -moz-animation:spin 3s linear infinite;
+  animation:spin 3s linear infinite;
+}
+
+.preloader .loading-gif{
+  left: 0;
+  right: 0;
+  margin-top: 200px;
+  width: 256px;
+  height: 152px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url(../images/generator.gif);
+}
+.preloader .progress-bar{
+  margin-top: 20px;
+  width: 350px;
+  height: 20px;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.preloader .progress-bar .progress{
+  height: 20px;
+  background-color: #5cb85c;
+  background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-size: 40px 40px;
+  background-position-x: 1000px; 
+  -webkit-animation: barAnim 10s infinite linear;
+  -moz-animation: barAnim 10s infinite linear;
+  -ms-animation: barAnim 10s infinite linear;
+  -o-animation: barAnim 10s infinite linear;
+  animation: barAnim 10s infinite linear;
+}
+
+.preloader .progress-bar .progress-text{
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 332px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 23px;
+}
+
 header#header{
 	display: block;
 	width: 100%;
@@ -877,3 +1005,39 @@ iframe{
     transform: scale3d(.8,.8,.8);
 }
 }
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@-moz-keyframes counterSpin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes counterSpin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes counterSpin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+@-webkit-keyframes barAnim {
+  from {background-position-x: 0px;};
+  to {background-position-x: 1000px;};
+}
+
+@-moz-keyframes barAnim {
+  from {background-position-x: 0px;};
+  to {background-position-x: 1000px;};
+}
+
+@-ms-keyframes barAnim {
+  from {background-position-x: 0px;};
+  to {background-position-x: 1000px;};
+}
+
+@-o-keyframes barAnim {
+  from {background-position-x: 0px;};
+  to {background-position-x: 1000px;};
+}
+
+@keyframes barAnim {
+  from {background-position-x: 0px;};
+  to {background-position-x: 1000px;};
+}
+
+
+

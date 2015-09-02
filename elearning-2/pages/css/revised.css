@@ -328,6 +328,14 @@ border-radius: 10px;
     height: 335px;
 }
 
+.rightImage {
+    position: absolute;
+    left: -19px;
+    top: 52px;
+    width: 89px;
+    height: 187px;
+}
+
 .line {
 	position: absolute;
     left: 76px;

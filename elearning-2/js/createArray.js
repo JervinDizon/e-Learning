@@ -1,5 +1,9 @@
-for (var i = 1; i <= totalChapters; i++) { 
-	content += "<a href='#' onclick='navClick(" + i + ")'><span><img src='images/thumblock.png'></img></span><p class='navigation'>" + i + "</p></a>";
+for (var i = 1; i <= totalChapters; i++) {
+	if(i==1){
+		content += "<a href='#' onclick='navClick(" + i + ")'><span class='done'><img src='images/thumblock.png'></img></span><p class='navigation'>" + i + "</p></a>";
+	}else{
+		content += "<a href='#' onclick='navClick(" + i + ")'><span><img src='images/thumblock.png'></img></span><p class='navigation'>" + i + "</p></a>";
+	}
 	pagesContentHolder.push([]);
 	soundContentHolder.push([]);
 	currentChapterPage.push(1);// all chapters into page 1 default
