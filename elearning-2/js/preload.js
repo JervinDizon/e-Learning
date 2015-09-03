@@ -1,6 +1,7 @@
 "use strict";
 (function(){
 	var currentProgress;
+	var pageShowed = false;
 
 	var Preload = function(path) {
 		this.path = path;
@@ -27,32 +28,24 @@
 			{id:'images/sound_unmute.png',src:this.path+'images/sound_unmute.png'},
 			{id:'images/thumblock.png',src:this.path+'images/thumblock.png'},
 			{id:'pages/images/cognizant.png',src:this.path+'pages/images/cognizant.png'},
-			{id:'pages/images/page03img01.png',src:this.path+'pages/images/page03img01.png'},
-			{id:'pages/images/page15img01.png',src:this.path+'pages/images/page15img01.png'},
-			{id:'pages/images/page19img01.png',src:this.path+'pages/images/page19img01.png'},
-			{id:'pages/images/page21img01.png',src:this.path+'pages/images/page21img01.png'},
-			{id:'pages/images/page23img01.png',src:this.path+'pages/images/page23img01.png'},
-			{id:'pages/images/page35img00.png',src:this.path+'pages/images/page35img00.png'},
-			{id:'pages/images/page36img01.png',src:this.path+'pages/images/page36img01.png'},
-			{id:'pages/images/page40img01.png',src:this.path+'pages/images/page40img01.png'},
-			{id:'pages/images/page50img01.png',src:this.path+'pages/images/page50img01.png'},
-			{id:'pages/images/page52img01.jpg',src:this.path+'pages/images/page52img01.jpg'}
+			{id:'pages/images/pencil03.png',src:this.path+'pages/images/pencil03.png'},
+			{id:'pages/images/signalLight2.png',src:this.path+'pages/images/signalLight2.png'},
+			{id:'pages/images/yellowred.png',src:this.path+'pages/images/yellowred.png'},
+			{id:'pages/images/distance.png',src:this.path+'pages/images/distance.png'},
+			{id:'pages/images/green.png',src:this.path+'pages/images/green.png'},
+			{id:'pages/images/pencil02.png',src:this.path+'pages/images/pencil02.png'},
+			{id:'pages/images/red.png',src:this.path+'pages/images/red.png'},
+			{id:'pages/images/shake.png',src:this.path+'pages/images/shake.png'},
+			{id:'pages/images/signalLight.png',src:this.path+'pages/images/signalLight.png'},
+			{id:'pages/images/stickman.png',src:this.path+'pages/images/stickman.png'},
+			{id:'pages/images/yellow.png',src:this.path+'pages/images/yellow.png'},
+			{id:'pages/images/line.png',src:this.path+'pages/images/line.png'},
+			{id:'pages/images/pencil01.png',src:this.path+'pages/images/pencil01.png'}
 		];
 
 		this.pushItems("thumbm01c0","images/",".png",8);
-		this.pushItems("page01img0","pages/images/",".png",3);
-		this.pushItems("page11img0","pages/images/",".png",2);
-		this.pushItems("page18img0","pages/images/",".png",2);
-		this.pushItems("page27img0","pages/images/",".png",5);
-		this.pushItems("page28img0","pages/images/",".png",9);
-		this.pushItems("page28img1","pages/images/",".png",5);
-		this.pushItems("page31img0","pages/images/",".png",4);
-		this.pushItems("page32img0","pages/images/",".png",6);
-		this.pushItems("page35circle0","pages/images/",".png",5);
-		this.pushItems("page35img0","pages/images/",".png",5);
-		this.pushItems("page35img0","pages/images/",".png",5);
-		this.pushItems("page35img0","pages/images/",".png",5);
-		this.pushItems("page","pages/",".html",56);
+		this.pushItems("image","pages/images/",".png",11);
+		this.pushItems("page","pages/",".html",60);
 		this.pushItems("audio","audio/",".mp3",56);
 	};
 
@@ -93,15 +86,19 @@
 		if(Math.round(currentProgress * 100) <= 100){
 			document.querySelector('.preloader .progress-bar .progress').style.cssText = anim;
 			document.querySelector('.preloader .progress-bar .progress').style.width = Math.round(currentProgress * 100) + "%";
-			document.querySelector('.preloader .progress-bar .progress-text').innerHTML = "Initializing Content... " + Math.round(currentProgress * 100) + "%";
+			document.querySelector('.preloader .progress-bar .progress-text').innerHTML = " Initializing Content... " + Math.round(currentProgress * 100) + "%";
 		}else if(Math.round(currentProgress * 100) == 101){
-			preload.showContent();
+			if(!pageShowed){
+				pageShowed = true;
+				preload.showContent();
+			}
 		}
 		// document.querySelector('.preloader .progress-bar .progress').innerHTML = Math.round(event.loaded * 100);
 	};
 
 	Preload.prototype.showContent = function(){
 		setTimeout(function(){
+			console.log("show content")
 			document.querySelector('.main-wrapper').style.top = "0";
 			document.querySelector('.main-wrapper').classList.add("animationFadein");
 			document.querySelector('.preloader').style.display = "none";
@@ -113,7 +110,7 @@
 		},1000)
 	}
 
-	 var preload = new Preload("http://jervindizon.github.io/elearning/");
+	 var preload = new Preload("http://jervindizon.github.io/elearning-2/");
 	//var preload = new Preload("");
 	preload.setPreload();
 	preload.loadManifest();
