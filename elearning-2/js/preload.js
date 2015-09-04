@@ -43,10 +43,10 @@
 			{id:'pages/images/pencil01.png',src:this.path+'pages/images/pencil01.png'}
 		];
 
-		this.pushItems("thumbm01c0","images/",".png",8);
+		this.pushItems("thumbmod02c","images/",".png",10);
 		this.pushItems("image","pages/images/",".png",11);
 		this.pushItems("page","pages/",".html",60);
-		this.pushItems("audio","audio/",".mp3",56);
+		this.pushItems("audio","audio/",".mp3",60);
 	};
 
 	Preload.prototype.pushItems = function(name,path,ext,count){
