@@ -68,8 +68,8 @@ function enableControls(){
 	play_btn.style.visibility = "hidden";
 	pause_btn.style.visibility = "visible";
 	muted = false;
-	next_btn.addEventListener("click",nextPage);
-	previous_btn.addEventListener("click",backPage);
+	next_btn.removeEventListener("click",nextPage);
+	previous_btn.removeEventListener("click",backPage);
 }
 
 loadScript("js/defaults.js", jsLoaded);
