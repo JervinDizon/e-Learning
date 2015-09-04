@@ -17,6 +17,11 @@ document.querySelector('#message').addEventListener("animationend",function(){
 	(document.querySelector('.question.correct')) ? window.top.postMessage('correct', '*') : console.log("wrong answer");
 });
 
+document.querySelector('#message').addEventListener("webkitAnimationEnd",function(){
+	document.querySelector('.message').className = (document.querySelector('.question.correct')) ? 'message show correct' : 'message show';
+	(document.querySelector('.question.correct')) ? window.top.postMessage('correct', '*') : console.log("wrong answer");
+});
+
 function choicesHandler(e){
   document.querySelector('.message').className = 'message';
 	for (var i = 1; i <= Object.keys(quiz["choices"]).length; i++) {
