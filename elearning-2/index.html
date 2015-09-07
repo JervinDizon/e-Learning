@@ -7,16 +7,18 @@
 	<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 	<script type="text/javascript">
-	var win2;
+	var win2,show,hide;
 	function openpopup(address){
 		document.querySelector('#message').className = 'message';
 		try{
 			if(!win2.closed){
-				setTimeout(function(){
+				clearTimeout(show);
+				clearTimeout(hide);
+				show = setTimeout(function(){
 					document.querySelector('#message').className = 'message show';
 				},300);
 				document.querySelector('#message').addEventListener("webkitAnimationEnd",function(){
-					setTimeout(function(){
+				hide = setTimeout(function(){
 						document.querySelector('#message').className = 'message hide';
 					},1000);
 				});
