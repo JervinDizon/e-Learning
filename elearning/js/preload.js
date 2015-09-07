@@ -117,9 +117,4 @@
 	//var preload = new Preload("");
 	preload.setPreload();
 	preload.loadManifest();
-
-	//-- Refresh contents to extend expiration from cache
-	setInterval(function(){
-		preload.loadManifest();
-	},300000)
 })();
