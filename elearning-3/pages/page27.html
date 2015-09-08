@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>quiz</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href='css/quiz.css' rel='stylesheet' type='text/css'>
+	<style>
+		div.choices{
+			margin-top: 17px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Quiz</h1>
+		<h2 class="question"></h2>
+		<div class="choices">
+		</div>
+		<div class="message hide" id="message">Message</div>
+	</div>
+</body>
+<script>
+	var quiz = {
+		"question": "Building rapport is the art of communicating effectively to<br>strengthen the connection with people and ensure that <br>you are being understood. Given below are some <br>situations of active rapport during customer interaction. <br><br>1. &quot;Let me show you some benefits of the product that will <br>meet your design&quot;<br>2. &quot;How do you feel about this. This product will be very <br>useful for you Sir&quot;<br>3. &quot;We have designed a comprehensive pack specially for you&quot;<br>4. &quot;What you are saying is not right Sir. This is not <br>beneficial for you&quot;<br><br>Choose the correct answer",
+		"choices": {
+			"1": "1 , 2 & 3",
+			"2": "1, 2 & 4",
+			"3": "2 , 3 & 4",
+			"4": "None of the above"
+		},
+		"answer":"1"
+	};
+</script>
+<script type="text/javascript" src="js/quiz.js"></script>
+</html>

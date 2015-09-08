@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:500,100,300,700,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.createjs.com/preloadjs-0.6.1.min.js"></script>
+</head>
+<body>
+	<div class="preloader">
+		<div class="loading-gears">
+			<div class="g1"></div>
+			<div class="g2"></div>
+			<div class="g3"></div>
+			<div class="g4"></div>
+			<div class="gE"></div>
+		</div>
+		<div class="progress-bar">
+			<div class="progress"></div>
+			<div class="progress-text">Intitializing Content...</div>
+		</div>
+	</div>
+	<div class="main-wrapper">
+		<header id="header">
+			<div class="wrapper">
+				<div class="main-title">COGNIZANT E-LEARNING CENTER</div>
+			</div>
+		</header>
+		<section class="content">
+			<aside class="chapters">
+				<header>CHAPTERS</header>
+				<nav>
+				</nav>
+			</aside>
+			<div class="elearning-content">
+				<div class="controls">
+					<div class="progress">
+						<div id="progress-title"></div>
+						<div id="progress-page"></div>
+					</div>
+					<div id="sound-mute"></div>
+					<div id="sound-unmute"></div>
+					<div id="play"></div>
+					<div id="pause"></div>
+				</div>
+				<div id="paper"></div>
+				<iframe id="iframe" src="pages/page1.html"></iframe>
+				<div id="mrlee"></div>
+				<div id="previous"></div>
+				<div id="next"></div>
+				<div id="closeX"></div>
+				<div id="pointer"></div>
+			</div>			
+		</section>
+		<footer>
+			<div class="wrapper">
+				<div class="footer-copyright">© Cognizant 2015</div>
+				<div class="footer-logo">
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+<script>
+	document.querySelector('.elearning-content').style.height = document.querySelector('aside.chapters').offsetHeight + "px";
+	/*window.onresize = function() {
+		document.querySelector('.elearning-content').style.height = document.querySelector('aside.chapters').offsetHeight + "px";
+	}*/
+</script>
+<script type="text/javascript" src="js/preload.js"></script>
+</html>
