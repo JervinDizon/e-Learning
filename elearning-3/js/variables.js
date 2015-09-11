@@ -1,7 +1,7 @@
 //PAGE Variables
 var totalChapters = 7,//change to total chapters
 	pagesPerChapter = [3,11,6,8,14,12,12], //change to number of pages per chapters separated in commas
-	chapterTitles = ["Barriers to Communication","Turning around a Sales objection","Winning over Difficult Customers","NO!!!","Calming Irate Customers","Repairing a Damaged Customer Relationship","Non Verbal Communication Styles","Case Study – Non Verbal Communication","Sales Tips","Summary"],
+	chapterTitles = ["GMB Fundamentals Course 1","Learn to Listen","Empathy","Rapport Building","Assertive","Being Polite","SMART Goals"],
 	pageOfQuiz = [0,10,5,7,12,11,8],//number of the page where the quiz start. Note: can only be implemented on last 2 pages of the chapter
 	pagesContentHolder = [],
 	soundContentHolder = [],

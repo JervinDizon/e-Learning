@@ -172,6 +172,8 @@ function checkProgress(clicked){
 				if(progressPage.innerHTML == ((pageOfQuiz[currentChapter-1]) + "/" + pagesPerChapter[currentChapter-1]) && (pageOfQuiz[currentChapter-1] !=0)){
 					callingMrLee();
 				}else{
+					console.log(pageOfQuiz[currentChapter-1] +" vs "+ (currentChapterPage[currentChapter-1]-1))
+					if(currentChapter == totalChapters && pageOfQuiz[currentChapter-1] != (currentChapterPage[currentChapter-1])){return}
 					exitMrLee();
 				}
 			}
@@ -188,7 +190,14 @@ function checkProgress(clicked){
 						document.querySelector('nav a:nth-child(1) span').classList.add("done");
 					}
 				}else{
-					exitMrLee();
+					var i = 1;
+					console.log("how many quiz "+((pagesPerChapter[currentChapter-1] - pageOfQuiz[currentChapter-1]+1)));
+					console.log((pageOfQuiz[currentChapter-1]+i) + "/" + pagesPerChapter[currentChapter-1]);
+					console.log(progressPage.innerHTML)
+					i = (((pagesPerChapter[currentChapter-1] - pageOfQuiz[currentChapter-1]+1)) > 2) ? 2 : 1;
+					if(progressPage.innerHTML == (1 + "/" + pagesPerChapter[currentChapter-1])){
+						exitMrLee();
+					}
 				}
 			}
 		break;

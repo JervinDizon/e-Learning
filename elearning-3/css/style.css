@@ -271,34 +271,25 @@ nav a span.done{
   opacity: 1;
 }
 
-nav a:nth-child(1) span{background: url("../images/thumbmod02c1.png");
+nav a:nth-child(1) span{background: url("../images/thumbmod03c1.png");
                         background-repeat: no-repeat;
                         background-size: 132px auto;}
-nav a:nth-child(2) span{background: url("../images/thumbmod02c2.png");
+nav a:nth-child(2) span{background: url("../images/thumbmod03c2.png");
                         background-repeat: no-repeat;
                         background-size: 132px auto;}
-nav a:nth-child(3) span{background: url("../images/thumbmod02c3.png");
+nav a:nth-child(3) span{background: url("../images/thumbmod03c3.png");
                         background-repeat: no-repeat;
                         background-size: 132px auto;}
-nav a:nth-child(4) span{background: url("../images/thumbmod02c4.png");
+nav a:nth-child(4) span{background: url("../images/thumbmod03c4.png");
                         background-repeat: no-repeat;
                         background-size: 132px auto;}
-nav a:nth-child(5) span{background: url("../images/thumbmod02c5.png");
+nav a:nth-child(5) span{background: url("../images/thumbmod03c5.png");
                         background-repeat: no-repeat;
                         background-size: 132px auto;}
-nav a:nth-child(6) span{background: url("../images/thumbmod02c6.png");
+nav a:nth-child(6) span{background: url("../images/thumbmod03c6.png");
                         background-repeat: no-repeat;
                         background-size: 132px auto;}
-nav a:nth-child(7) span{background: url("../images/thumbmod02c7.png");
-                        background-repeat: no-repeat;
-                        background-size: 132px auto;}
-nav a:nth-child(8) span{background: url("../images/thumbmod02c8.png");
-                        background-repeat: no-repeat;
-                        background-size: 132px auto;}
-nav a:nth-child(9) span{background: url("../images/thumbmod02c9.png");
-                        background-repeat: no-repeat;
-                        background-size: 132px auto;}
-nav a:nth-child(10) span{background: url("../images/thumbmod02c10.png");
+nav a:nth-child(7) span{background: url("../images/thumbmod03c7.png");
                         background-repeat: no-repeat;
                         background-size: 132px auto;}
 
