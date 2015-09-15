@@ -222,6 +222,7 @@ loadScript("js/soundControls.js", jsLoaded);
 
 window.onmessage = function(e){
     if (e.data == 'correct') {
+    	isQuiz = false;
     	aud.src = 'audio/correct.mp3';
     	aud.play();
         disableControls();

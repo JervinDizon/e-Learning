@@ -84,18 +84,18 @@
 
 	Preload.prototype.onProgress = function(event){
 		// console.log(Math.round(event.loaded * 100));
-		currentProgress = event.loaded * 1.5;
+		currentProgress = event.loaded * 1;
 		console.log(Math.round(currentProgress * 100));
 		var anim = "";
 			anim += "-webkit-transition: width 500ms ease-in-out;";
 			anim += "-moz-transition: width 500ms ease-in-out;";
 			anim += "transition: width 500ms ease-in-out;";
 			anim += "width: " + Math.round(currentProgress * 100) + "%;";
-		if(Math.round(currentProgress * 100) <= 100){
+		if(Math.round(currentProgress * 100) < 100){
 			document.querySelector('.preloader .progress-bar .progress').style.cssText = anim;
 			document.querySelector('.preloader .progress-bar .progress').style.width = Math.round(currentProgress * 100) + "%";
 			document.querySelector('.preloader .progress-bar .progress-text').innerHTML = "Initializing Content... " + Math.round(currentProgress * 100) + "%";
-		}else if(Math.round(currentProgress * 100) == 101){
+		}else if(Math.round(currentProgress * 100) == 100){
 			if(!pageShowed){
 				pageShowed = true;
 				preload.showContent();
@@ -125,5 +125,5 @@
 	//-- Refresh contents to extend expiration from cache
 	setInterval(function(){
 		preload.loadManifest();
-	},300000)
+	},150000)
 })();
