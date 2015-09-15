@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/revised.css">
+	<style>
+		table{
+		    padding: 0 0 0 0;
+		}
+		td{
+		    vertical-align: top;
+		}
+		.content{
+			padding: 0;
+			width: 97%;
+			height: 575px;
+			font-size: 25px;
+		}
+		.mark{
+			margin-bottom: 20px;
+			padding-left: 100px;
+			width: 700px;
+			height: 70px;
+			background: url('images/mark.png');
+			background-repeat: no-repeat;
+			background-size: 60px auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<header>
+			<div class="headline-container">
+				<h2>Benefits of being Assertive…</h2>
+			</div>
+		</header>
+		<section>
+			<div class="container">
+				<div class="content">
+					<div class="mark">Makes you feel better about yourself</div>
+					<div class="mark">Minimizes any unpleasantness</div>
+					<div class="mark">Helps you to have better relations with others</div>
+					<div class="mark">Reduces Stress levels</div>
+					<div class="mark">Able to adapt to changing environments</div>
+					<div class="mark">Puts you in a easy position to handle things</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+
+		</footer>
+	</div>
+<script>
+	var margin = 33;
+	for (var i = 1; i <= 5; i++) {
+		document.getElementsByClassName("mark")[i].style.marginLeft += margin + "px";
+		margin = margin + 33;
+	};
+</script>
+</body>
+</html>

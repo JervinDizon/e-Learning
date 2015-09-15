@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>quiz</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href='css/quiz.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="container">
+		<h1>Quiz</h1>
+		<h2 class="question"></h2>
+		<div class="choices">
+		</div>
+		<div class="message hide" id="message">Message</div>
+	</div>
+</body>
+<script>
+	var quiz = {
+		"question": "Mike is the senior sales associate in leading firm. He gets<br>to meet all the important customers for finalization of the <br>sale. The company has launched many new products and <br>hence Mike schedule and targets are very high.<br>Mike follows the principles of Sales as below.<br><br><i>1. Direct questioning</i><br><i>2. Being polite</i><br><i>3. Requests</i><br><i>4. Indirect questioning</i><br><br>Which of the statements are correct",
+		"choices": {
+			"1": "1 , 2 & 3",
+			"2": "2, 3 & 4",
+			"3": "1 & 4",
+			"4": "All of the above"
+		},
+		"answer":"4"
+	};
+</script>
+<script type="text/javascript" src="js/quiz.js"></script>
+</html>
