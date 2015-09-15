@@ -43,8 +43,8 @@
 			{id:'pages/images/pencil01.png',src:this.path+'pages/images/pencil01.png'}
 		];
 
-		this.pushItems("thumbmod02c","images/",".png",10);
-		this.pushItems("image","pages/images/",".png",11);
+		this.pushItems("thumbmod02c","images/",".png",11);
+		this.pushItems("image","pages/images/",".png",12);
 		this.pushItems("page","pages/",".html",60);
 		this.pushItems("audio","audio/",".mp3",60);
 	};
