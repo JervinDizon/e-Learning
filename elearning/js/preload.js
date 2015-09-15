@@ -1,6 +1,7 @@
 "use strict";
 (function(){
 	var currentProgress;
+	var pageShowed = false;
 
 	var Preload = function(path) {
 		this.path = path;
@@ -95,7 +96,10 @@
 			document.querySelector('.preloader .progress-bar .progress').style.width = Math.round(currentProgress * 100) + "%";
 			document.querySelector('.preloader .progress-bar .progress-text').innerHTML = "Initializing Content... " + Math.round(currentProgress * 100) + "%";
 		}else if(Math.round(currentProgress * 100) == 101){
-			preload.showContent();
+			if(!pageShowed){
+				pageShowed = true;
+				preload.showContent();
+			}
 		}
 		// document.querySelector('.preloader .progress-bar .progress').innerHTML = Math.round(event.loaded * 100);
 	};
