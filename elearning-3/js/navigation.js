@@ -96,6 +96,7 @@ checkProgress("back");
 }
 
 function navClick(e){
+	document.querySelector('nav a:nth-child(' + (currentChapter) + ') span').style.pointerEvents = "";
 	Iframe.classList.add("animationFadein");
 	setTimeout(function(){Iframe.classList.remove("animationFadein")},1000)
 	arrowClicked = false;
