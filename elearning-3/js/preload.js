@@ -28,25 +28,44 @@
 			{id:'images/sound_unmute.png',src:this.path+'images/sound_unmute.png'},
 			{id:'images/thumblock.png',src:this.path+'images/thumblock.png'},
 			{id:'pages/images/cognizant.png',src:this.path+'pages/images/cognizant.png'},
-			{id:'pages/images/pencil03.png',src:this.path+'pages/images/pencil03.png'},
-			{id:'pages/images/signalLight2.png',src:this.path+'pages/images/signalLight2.png'},
-			{id:'pages/images/yellowred.png',src:this.path+'pages/images/yellowred.png'},
-			{id:'pages/images/distance.png',src:this.path+'pages/images/distance.png'},
-			{id:'pages/images/green.png',src:this.path+'pages/images/green.png'},
-			{id:'pages/images/pencil02.png',src:this.path+'pages/images/pencil02.png'},
-			{id:'pages/images/red.png',src:this.path+'pages/images/red.png'},
-			{id:'pages/images/shake.png',src:this.path+'pages/images/shake.png'},
-			{id:'pages/images/signalLight.png',src:this.path+'pages/images/signalLight.png'},
-			{id:'pages/images/stickman.png',src:this.path+'pages/images/stickman.png'},
-			{id:'pages/images/yellow.png',src:this.path+'pages/images/yellow.png'},
+			{id:'pages/images/cognizant.png',src:this.path+'pages/images/appreciative.png'},
+			{id:'pages/images/arrow.png',src:this.path+'pages/images/arrow.png'},
+			{id:'pages/images/board.png',src:this.path+'pages/images/board.png'},
+			{id:'pages/images/bubble.png',src:this.path+'pages/images/bubble.png'},
+			{id:'pages/images/c.png',src:this.path+'pages/images/c.png'},
+			{id:'pages/images/chatting.png',src:this.path+'pages/images/chatting.png'},
+			{id:'pages/images/cloud.png',src:this.path+'pages/images/cloud.png'},
+			{id:'pages/images/conversation.png',src:this.path+'pages/images/conversation.png'},
+			{id:'pages/images/critical.png',src:this.path+'pages/images/critical.png'},
+			{id:'pages/images/cycle.png',src:this.path+'pages/images/cycle.png'},
+			{id:'pages/images/discrimination.png',src:this.path+'pages/images/discrimination.png'},
+			{id:'pages/images/ear.png',src:this.path+'pages/images/ear.png'},
+			{id:'pages/images/empathic.png',src:this.path+'pages/images/empathic.png'},
+			{id:'pages/images/face.png',src:this.path+'pages/images/face.png'},
+			{id:'pages/images/filter.png',src:this.path+'pages/images/filter.png'},
+			{id:'pages/images/head.png',src:this.path+'pages/images/head.png'},
+			{id:'pages/images/hear.png',src:this.path+'pages/images/hear.png'},
+			{id:'pages/images/informative.png',src:this.path+'pages/images/informative.png'},
 			{id:'pages/images/line.png',src:this.path+'pages/images/line.png'},
-			{id:'pages/images/pencil01.png',src:this.path+'pages/images/pencil01.png'}
+			{id:'pages/images/man.png',src:this.path+'pages/images/man.png'},
+			{id:'pages/images/mark.png',src:this.path+'pages/images/mark.png'},
+			{id:'pages/images/octagon.png',src:this.path+'pages/images/octagon.png'},
+			{id:'pages/images/oval.png',src:this.path+'pages/images/oval.png'},
+			{id:'pages/images/pencil.png',src:this.path+'pages/images/pencil.png'},
+			{id:'pages/images/pyramid.png',src:this.path+'pages/images/pyramid.png'},
+			{id:'pages/images/reveal.png',src:this.path+'pages/images/reveal.png'},
+			{id:'pages/images/skills.png',src:this.path+'pages/images/skills.png'},
+			{id:'pages/images/smart.png',src:this.path+'pages/images/smart.png'},
+			{id:'pages/images/steps.png',src:this.path+'pages/images/steps.png'},
+			{id:'pages/images/tag.png',src:this.path+'pages/images/tag.png'}
 		];
 
-		this.pushItems("thumbmod02c","images/",".png",10);
-		this.pushItems("image","pages/images/",".png",11);
-		this.pushItems("page","pages/",".html",60);
-		this.pushItems("audio","audio/",".mp3",60);
+		this.pushItems("thumbmod03c","images/",".png",8);
+		this.pushItems("box","pages/images/",".png",3);
+		this.pushItems("smiley","pages/images/",".png",11);
+		this.pushItems("smart","pages/images/",".png",6);
+		this.pushItems("page","pages/",".html",67);
+		this.pushItems("audio","audio/",".mp3",67);
 	};
 
 	Preload.prototype.pushItems = function(name,path,ext,count){
@@ -110,7 +129,7 @@
 		},1000)
 	}
 
-	 var preload = new Preload("http://jervindizon.github.io/elearning-2/");
+	 var preload = new Preload("http://jervindizon.github.io/elearning-3/");
 	//var preload = new Preload("");
 	preload.setPreload();
 	preload.loadManifest();
