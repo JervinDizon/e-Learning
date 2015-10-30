@@ -28,25 +28,32 @@
 			{id:'images/sound_unmute.png',src:this.path+'images/sound_unmute.png'},
 			{id:'images/thumblock.png',src:this.path+'images/thumblock.png'},
 			{id:'pages/images/cognizant.png',src:this.path+'pages/images/cognizant.png'},
-			{id:'pages/images/pencil03.png',src:this.path+'pages/images/pencil03.png'},
-			{id:'pages/images/signalLight2.png',src:this.path+'pages/images/signalLight2.png'},
-			{id:'pages/images/yellowred.png',src:this.path+'pages/images/yellowred.png'},
-			{id:'pages/images/distance.png',src:this.path+'pages/images/distance.png'},
-			{id:'pages/images/green.png',src:this.path+'pages/images/green.png'},
-			{id:'pages/images/pencil02.png',src:this.path+'pages/images/pencil02.png'},
-			{id:'pages/images/red.png',src:this.path+'pages/images/red.png'},
-			{id:'pages/images/shake.png',src:this.path+'pages/images/shake.png'},
-			{id:'pages/images/signalLight.png',src:this.path+'pages/images/signalLight.png'},
-			{id:'pages/images/stickman.png',src:this.path+'pages/images/stickman.png'},
-			{id:'pages/images/yellow.png',src:this.path+'pages/images/yellow.png'},
+			{id:'pages/images/arrow.png',src:this.path+'pages/images/arrow.png'},
+			{id:'pages/images/arrow2.png',src:this.path+'pages/images/arrow2.png'},
+			{id:'pages/images/arrow3.png',src:this.path+'pages/images/arrow3.png'},
+			{id:'pages/images/behaviour.png',src:this.path+'pages/images/behaviour.png'},
+			{id:'pages/images/block1.png',src:this.path+'pages/images/block1.png'},
+			{id:'pages/images/block2.png',src:this.path+'pages/images/block2.png'},
+			{id:'pages/images/c.png',src:this.path+'pages/images/c.png'},
+			{id:'pages/images/cause_effect.png',src:this.path+'pages/images/cause_effect.png'},
+			{id:'pages/images/chart.png',src:this.path+'pages/images/chart.png'},
+			{id:'pages/images/cycle.png',src:this.path+'pages/images/cycle.png'},
+			{id:'pages/images/excellence.png',src:this.path+'pages/images/excellence.png'},
+			{id:'pages/images/factors.png',src:this.path+'pages/images/factors.png'},
+			{id:'pages/images/fbac.png',src:this.path+'pages/images/fbac.png'},
+			{id:'pages/images/gear.png',src:this.path+'pages/images/gear.png'},
 			{id:'pages/images/line.png',src:this.path+'pages/images/line.png'},
-			{id:'pages/images/pencil01.png',src:this.path+'pages/images/pencil01.png'}
+			{id:'pages/images/man.png',src:this.path+'pages/images/man.png'},
+			{id:'pages/images/oval.png',src:this.path+'pages/images/oval.png'},
+			{id:'pages/images/people.png',src:this.path+'pages/images/people.png'},
+			{id:'pages/images/smiley1.png',src:this.path+'pages/images/smiley1.png'},
+			{id:'pages/images/switch.png',src:this.path+'pages/images/switch.png'}
 		];
 
-		this.pushItems("thumbmod02c","images/",".png",10);
-		this.pushItems("image","pages/images/",".png",11);
-		this.pushItems("page","pages/",".html",60);
-		this.pushItems("audio","audio/",".mp3",60);
+		this.pushItems("thumbmod04c","images/",".png",8);
+		this.pushItems("box","pages/images/",".png",22);
+		this.pushItems("page","pages/",".html",58);
+		this.pushItems("audio","audio/",".mp3",58);
 	};
 
 	Preload.prototype.pushItems = function(name,path,ext,count){
@@ -110,7 +117,7 @@
 		},1000)
 	}
 
-	 var preload = new Preload("http://jervindizon.github.io/elearning-2/");
+	 var preload = new Preload("http://jervindizon.github.io/elearning-4/");
 	//var preload = new Preload("");
 	preload.setPreload();
 	preload.loadManifest();
