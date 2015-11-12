@@ -3,6 +3,7 @@ mute_btn.addEventListener("click",toggleSound);
 play_btn.addEventListener("click",togglePlayPause);
 pause_btn.addEventListener("click",togglePlayPause);
 aud.onended = function() {soundComplete()};
+var ended = false;
 
 function toggleSound(){
 	if(muted){
@@ -19,6 +20,13 @@ function toggleSound(){
 }
 
 function togglePlayPause(){
+	if(currentChapter == 8 && ended == false && (progressPage.innerHTML == "3/5" || progressPage.innerHTML == "4/5" || progressPage.innerHTML == "5/5")){
+		play_btn.style.display = "none";
+		pause_btn.style.display = "none";
+	}else{
+		play_btn.style.display = "block";
+		pause_btn.style.display = "block";
+	}
 	if(!isPlaying){
 		aud.play();
 		aud.volume = 1;
@@ -37,6 +45,9 @@ function togglePlayPause(){
 }
 
 function soundComplete(){
+	ended = true;
+	play_btn.style.display = "block";
+	pause_btn.style.display = "block";
 	console.log("soundComplete")
 	if(!isQuiz)disableControls();
 }
@@ -62,6 +73,7 @@ function disableControls(){
 }
 
 function enableControls(){
+	ended = false;
 	pointer.style.display = "none";
 	mute_btn.style.visibility = "hidden";
 	unmute_btn.style.visibility = "visible";

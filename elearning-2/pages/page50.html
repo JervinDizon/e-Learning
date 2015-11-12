@@ -38,6 +38,18 @@
 		    background-repeat: no-repeat;
 		    background-size: auto 70px;
 		}
+
+		.image1,.image2,.image3,.animated{
+			opacity: 0;
+		}
+		
+		.animateFadeIn{
+			opacity: 1;
+			-webkit-transition:opacity 1s;
+			-moz-transition:opacity 1s;
+			transition:opacity 1s;
+		}
+		
 		li,p{
 			font-size: 28px;
 		}
@@ -55,16 +67,33 @@
 			<div class="container">
 				<div class="content">
 					<p style="color:#8BC34A; font-style:italic">She sits down behind her desk. She sits up straight in her chair. She claps her hands together and with little expression on her face says,<br>&nbsp“What can I do for you?”</p>
-					<p>1. What nonverbal signal is she communicating?</p>
-					<p>Yellow (Caution ) Non verbal Signal</p>
-					<p>2. How would you respond non verbally</p>
-					<p>Green (Acceptance ) Non verbal Signal</p>
+					<p class="animated">1. What nonverbal signal is she communicating?</p>
+					<p class="animated">Yellow (Caution ) Non verbal Signal</p>
+					<p class="animated">2. How would you respond non verbally</p>
+					<p class="animated">Green (Acceptance ) Non verbal Signal</p>
 					<div class="image1"></div>
 					<div class="image2"></div>
 					<div class="image3"></div>
 				</div>
 			</div>
 		</section>
+		<script>
+			setTimeout(function(){
+				document.querySelector('.animated:nth-child(2)').classList.add('animateFadeIn');
+				document.querySelector('.image1').classList.add('animateFadeIn');
+			},14000)
+			setTimeout(function(){
+				document.querySelector('.animated:nth-child(3)').classList.add('animateFadeIn');
+				document.querySelector('.image2').classList.add('animateFadeIn')
+			},18000)
+			setTimeout(function(){
+				document.querySelector('.animated:nth-child(4)').classList.add('animateFadeIn');
+			},22000)
+			setTimeout(function(){
+				document.querySelector('.animated:nth-child(5)').classList.add('animateFadeIn');
+				document.querySelector('.image3').classList.add('animateFadeIn')
+			},26000)
+		</script>
 		<footer>
 
 		</footer>
