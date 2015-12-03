@@ -101,6 +101,7 @@ function navClick(e){
 	setTimeout(function(){Iframe.classList.remove("animationFadein")},1000)
 	arrowClicked = false;
 	pageEnd = false;
+	isQuiz = false;
 	selectedPage(e);
 	currentChapter = e;
 	if(currentChapter == 1){
@@ -138,7 +139,6 @@ function selectedPage(e){
 }
 
 function callingMrLee(){
-	isQuiz = true;
 	if(document.getElementById("mrlee").style.display == "block"){return;};
 	document.getElementById("mrlee").style.display = "block";
 	document.getElementById("mrlee").classList.add("animationFadeLeft");
@@ -148,7 +148,6 @@ function callingMrLee(){
 }
 
 function exitMrLee(){
-	isQuiz = false;
 	if(document.getElementById("mrlee").style.display == "block"){
 		document.getElementById('mrlee').classList.add("animationFadeOutLeft");
 		setTimeout(function(){
@@ -159,6 +158,7 @@ function exitMrLee(){
 }
 
 function checkProgress(clicked){
+	isQuiz = false;
 	playSound();
 	switch(clicked){
 		case "back":
@@ -226,5 +226,7 @@ window.onmessage = function(e){
     	aud.src = 'audio/correct.mp3';
     	aud.play();
         disableControls();
+    }else if(e.data == 'quizActive'){
+    	isQuiz = true;
     }
 };

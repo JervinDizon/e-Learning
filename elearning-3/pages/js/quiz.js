@@ -8,6 +8,8 @@ for (var i = 1; i <= Object.keys(quiz["choices"]).length; i++) {
 	content += "</div>"
 }
 
+setTimeout("window.top.postMessage('quizActive', '*')")
+
 document.querySelector('.question').innerHTML = quiz["question"];
 document.querySelector('.choices').innerHTML += content;
 document.querySelector('.choices').addEventListener('click', choicesHandler);
