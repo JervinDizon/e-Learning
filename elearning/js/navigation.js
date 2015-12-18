@@ -142,6 +142,7 @@ function callingMrLee(){
 	if(document.getElementById("mrlee").style.display == "block"){return;};
 	document.getElementById("mrlee").style.display = "block";
 	document.getElementById("mrlee").classList.add("animationFadeLeft");
+	callingLee();
 	setTimeout(function(){
 		document.getElementById('mrlee').classList.remove("animationFadeLeft");
 	},1000)
@@ -151,11 +152,23 @@ function exitMrLee(){
 	isQuiz = false;
 	if(document.getElementById("mrlee").style.display == "block"){
 		document.getElementById('mrlee').classList.add("animationFadeOutLeft");
+		exitLee();
 		setTimeout(function(){
 			document.getElementById('mrlee').classList.remove("animationFadeOutLeft");
 			document.getElementById("mrlee").style.display = "none";
 		},1000)
 	}
+}
+
+function callingLee(){
+	var lee = document.querySelector("#mrlee");
+	TweenLite.fromTo(lee, 0.3, {x: 0, opacity: 0,ease:Linear.easeNone}, {x: -195, opacity: 1,ease:Linear.easeNone});
+	TweenLite.to(lee, 0.3, {x: -145, ease:Linear.easeNone, delay: 0.3});
+}
+
+function exitLee(){
+	var lee = document.querySelector("#mrlee");
+	TweenLite.fromTo(lee, 0.5, {x: -145, ease:Linear.easeNone}, {x: 0, opacity: 0, ease:Linear.easeNone});
 }
 
 function checkProgress(clicked){

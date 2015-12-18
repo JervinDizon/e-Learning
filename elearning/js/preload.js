@@ -92,8 +92,8 @@
 			anim += "transition: width 500ms ease-in-out;";
 			anim += "width: " + Math.round(currentProgress * 100) + "%;";
 		if(Math.round(currentProgress * 100) < 100){
-			document.querySelector('.preloader .progress-bar .progress').style.cssText = anim;
-			document.querySelector('.preloader .progress-bar .progress').style.width = Math.round(currentProgress * 100) + "%";
+			document.querySelector('.preloader .progress-bar .mask').style.cssText = anim;
+			document.querySelector('.preloader .progress-bar .mask').style.width = Math.round(currentProgress * 100) + "%";
 			document.querySelector('.preloader .progress-bar .progress-text').innerHTML = "Initializing Content... " + Math.round(currentProgress * 100) + "%";
 		}else if(Math.round(currentProgress * 100) == 100){
 			if(!pageShowed){
@@ -115,6 +115,9 @@
 			script.src = 'js/variables.js';
 			head.appendChild(script);
 		},1000)
+		setTimeout(function(){
+			$("nav a span").after("<div class='blocker'></div>");
+		},3000)
 	}
 
 	 var preload = new Preload("http://jervindizon.github.io/elearning/");

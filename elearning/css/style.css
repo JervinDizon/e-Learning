@@ -172,6 +172,7 @@ nav {
 }
 
 .preloader .progress-bar .progress{
+  width: 350px;
   height: 20px;
   background-color: #5cb85c;
   background-image: url(../images/bar.jpg);
@@ -183,6 +184,11 @@ nav {
   -ms-animation: barAnim 10s infinite linear;
   -o-animation: barAnim 10s infinite linear;
   animation: barAnim 10s infinite linear;
+}
+
+.preloader .progress-bar .mask{
+  height: 20px;
+  overflow: hidden;
 }
 
 .preloader .progress-bar .progress-text{
@@ -270,6 +276,15 @@ nav a span.done{
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgb(82, 236, 93);
   opacity: 1;
+}
+
+.blocker{
+  content: "";
+  position: absolute;
+  width: 174px;
+  height: 92px;
+  background-color: rgba(0,0,0,0);
+  cursor: default;
 }
 
 nav a:nth-child(1) span{background: url("../images/thumbm01c01.png");
@@ -528,7 +543,7 @@ iframe{
 
 #mrlee{
   position: absolute;
-  left: 393px;
+  left: 538px;
   top: 235px;
   width: 800px;
   height: 592px;
@@ -536,6 +551,7 @@ iframe{
   background-repeat: no-repeat;
   background-size: 614px auto;
   pointer-events: none;
+  opacity: 0;
   display: none;
 }
 
@@ -641,7 +657,7 @@ iframe{
 }
 }
 
-@-webkit-keyframes fadeInLeft {
+/*@-webkit-keyframes fadeInLeft {
 0% {
     -webkit-transform: translateX(150px);
     -moz-transform: translateX(150px);
@@ -869,9 +885,9 @@ iframe{
     -o-transform: translateX(150px);
     transform: translateX(150px);
 }
-}
+}*/
 
-@-webkit-keyframes scaleInOut {
+/*@-webkit-keyframes scaleInOut {
 0% {
     
     -webkit-transform: scale3d(.8,.8,.8);
@@ -1005,15 +1021,15 @@ iframe{
     -o-transform: scale3d(.8,.8,.8);
     transform: scale3d(.8,.8,.8);
 }
-}
+}*/
 
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+/*@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 @-moz-keyframes counterSpin { 100% { -moz-transform: rotate(-360deg); } }
 @-webkit-keyframes counterSpin { 100% { -webkit-transform: rotate(-360deg); } }
-@keyframes counterSpin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+@keyframes counterSpin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }*/
 
 @-webkit-keyframes barAnim {
   from {background-position-x: 0px;};

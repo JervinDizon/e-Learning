@@ -1,5 +1,5 @@
 for (var i = 1; i <= totalChapters; i++) { 
-	content += "<a href='#' onclick='navClick(" + i + ")'><span><img src='images/thumblock.png'></img></span><p class='navigation'>" + i + "</p></a>";
+	content += "<a href='#'><span onclick='navClick(" + i + ")'><img src='images/thumblock.png'></img></span><p class='navigation'>" + i + "</p></a>";
 	pagesContentHolder.push([]);
 	soundContentHolder.push([]);
 	currentChapterPage.push(1);// all chapters into page 1 default

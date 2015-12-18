@@ -1,6 +1,30 @@
 "use strict"
 var content = "";
 
+//LOADER FOR JS
+function loadScript(url, callback)
+{
+    // Adding the script tag to the head as suggested before
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+
+    // Then bind the event to the callback function.
+    // There are several events for cross browser compatibility.
+    script.onreadystatechange = callback;
+    script.onload = callback;
+
+    // Fire the loading
+    head.appendChild(script);
+}
+
+var jsLoaded = function() {
+	console.log("JS LOADED");
+};
+
+loadScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js", jsLoaded);
+
 for (var i = 1; i <= Object.keys(quiz["choices"]).length; i++) {
 	content += (i == quiz["answer"]) ? "<div class='answer'>" : "<div>";
 	content += "<span class='radio'><span><span></span></span></span>";
