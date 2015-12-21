@@ -124,7 +124,7 @@
 	.message.wrong{
 		background-color: rgba(244,67,54,0.8);
 		border: 1px solid rgb(244,67,54);
-		-webkit-animation-name: bounceIn;
+		/*-webkit-animation-name: bounceIn;
 		-webkit-animation-duration: 1000ms;
 		-webkit-animation-delay: 250ms;
 		-webkit-animation-fill-mode: forwards;
@@ -135,12 +135,12 @@
 		animation-name: bounceIn;
 		animation-duration: 1000ms;
 		animation-delay: 250ms;
-		animation-fill-mode: forwards;
+		animation-fill-mode: forwards;*/
 	}
 	.message.correct{
 		background-color: rgba(139,195,74,0.8);
 		border: 1px solid rgb(139,195,74);
-		-webkit-animation-name: bounceIn;
+		/*-webkit-animation-name: bounceIn;
 		-webkit-animation-duration: 1000ms;
 		-webkit-animation-delay: 250ms;
 		-webkit-animation-fill-mode: forwards;
@@ -151,7 +151,7 @@
 		animation-name: bounceIn;
 		animation-duration: 1000ms;
 		animation-delay: 250ms;
-		animation-fill-mode: forwards;
+		animation-fill-mode: forwards;*/
 	}
 	@-webkit-keyframes bounceIn {
 		0%, 20%, 40%, 60%, 80%, 100% {
