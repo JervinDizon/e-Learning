@@ -21,12 +21,14 @@ function nextPage() {
 		progressPage.innerHTML = (currentpage + 1).toString() + "/" +pagesPerChapter[currentChapter-1];
 		currentChapterPage[currentChapter-1]++;		
 	}else{
-		document.querySelector('nav a:nth-child(1) span').style.pointerEvents = "";
+		document.querySelector('nav a:nth-child(1) .blocker').style.display = "none";
 		if(currentChapter > 2){var pageCurrent = pagesPerChapter[currentChapter-2]+1}else{var pageCurrent = pagesPerChapter[currentChapter-2]}
 		if(currentChapterPage[currentChapter-2] == pageCurrent){
 			changeChapter = false;
 			currentChapterPage[currentChapter] = 1;
-			document.querySelector('nav a:nth-child(2) span').style.pointerEvents = "";
+			document.querySelector('nav a:nth-child(2) .blocker').style.display = "none";
+			document.querySelector('nav a:nth-child(' + (currentChapter-1) + ') .blocker').style.display = "none";
+			document.querySelector('nav a:nth-child(' + (currentChapter) + ') .blocker').style.display = "block";
 			document.querySelector('nav a:nth-child(' + (currentChapter-1) + ') span').classList.remove("selected");
 			document.querySelector('nav a:nth-child(' + (currentChapter) + ') span').classList.add("selected");
 			document.querySelector('nav a:nth-child(' + (currentChapter-1) + ')').classList.remove("selected");
@@ -40,8 +42,8 @@ function nextPage() {
 		progressPage.innerHTML = (currentpage).toString() + "/" +pagesPerChapter[currentChapter-1];
 		currentChapterPage[currentChapter-1]++;
 		if(progressPage.innerHTML == pagesPerChapter[currentChapter-1] + "/" + pagesPerChapter[currentChapter-1]){
-			document.querySelector('nav a:nth-child(1) span').style.pointerEvents = "";
-			document.querySelector('nav a:nth-child(' + (currentChapter) + ') span').style.pointerEvents = "";
+			document.querySelector('nav a:nth-child(1) .blocker').style.display = "none";
+			document.querySelector('nav a:nth-child(' + (currentChapter) + ') .blocker').style.display = "none";
 			document.querySelector('nav a:nth-child(' + (currentChapter) + ') span').classList.add("done");
 		}
 		pageEnd = (progressPage.innerHTML == pagesPerChapter[totalChapters-1] + "/" + pagesPerChapter[totalChapters-1]) ? true : false;
@@ -77,6 +79,8 @@ function backPage() {
 		currentChapterPage[currentChapter-1]--;
 		if(currentChapterPage[currentChapter-1] == 1){
 			if(currentChapter >2){var pageCurrent = currentChapterPage[currentChapter-2]-1}else{var pageCurrent = currentChapterPage[currentChapter-2]}
+			document.querySelector('nav a:nth-child(' + (currentChapter) + ') .blocker').style.display = "none";
+			document.querySelector('nav a:nth-child(' + (currentChapter-1) + ') .blocker').style.display = "block";
 			document.querySelector('nav a:nth-child(' + (currentChapter) + ') span').classList.remove("selected");
 			document.querySelector('nav a:nth-child(' + (currentChapter-1) + ') span').classList.add("selected");
 			document.querySelector('nav a:nth-child(' + (currentChapter) + ')').classList.remove("selected");
@@ -96,11 +100,12 @@ checkProgress("back");
 }
 
 function navClick(e){
-	document.querySelector('nav a:nth-child(' + (currentChapter) + ') span').style.pointerEvents = "";
+	document.querySelector('nav a:nth-child(' + (currentChapter) + ') .blocker').style.display = "none";
 	Iframe.classList.add("animationFadein");
 	setTimeout(function(){Iframe.classList.remove("animationFadein")},1000)
 	arrowClicked = false;
 	pageEnd = false;
+	isQuiz = false;
 	selectedPage(e);
 	currentChapter = e;
 	if(currentChapter == 1){
@@ -119,6 +124,16 @@ function navClick(e){
 	checkProgress("nav");
 }
 
+function navHover(i){
+	document.querySelector('nav a:nth-child(' + i + ') span').parentElement.style.color = "#fff";
+	document.querySelector('nav a:nth-child(' + i + ') span').parentElement.style.background = "rgba(110, 192, 211, 0.38)";
+}
+
+function navOut(i){
+	document.querySelector('nav a:nth-child(' + i + ') span').parentElement.style.color = "#546E7A";
+	document.querySelector('nav a:nth-child(' + i + ') span').parentElement.style.background = "rgba(0, 0, 0, 0)";
+}
+
 function selectedPage(e){
 	if(e==1){
 		currentChapterPage[e-1] = navigationCurrentPage[e-1]-1;
@@ -130,15 +145,18 @@ function selectedPage(e){
 	for (var i = 1; i <= totalChapters; i++) {
 		document.querySelector('nav a:nth-child('+i+') span').classList.remove("selected");
 		document.querySelector('nav a:nth-child('+i+')').classList.remove("selected");
+		if($('nav a:nth-child('+i+') span').hasClass("done")){
+			document.querySelector('nav a:nth-child('+i+') .blocker').style.display = "none";
+		}
 	};
 
 	document.querySelector('nav a:nth-child('+e+')').classList.add("selected");
+	document.querySelector('nav a:nth-child('+e+') .blocker').style.display = "block";
 	document.querySelector('nav a:nth-child('+e+') span').classList.add("selected");
 	
 }
 
 function callingMrLee(){
-	isQuiz = true;
 	if(document.getElementById("mrlee").style.display == "block"){return;};
 	document.getElementById("mrlee").style.display = "block";
 	document.getElementById("mrlee").classList.add("animationFadeLeft");
@@ -149,7 +167,6 @@ function callingMrLee(){
 }
 
 function exitMrLee(){
-	isQuiz = false;
 	if(document.getElementById("mrlee").style.display == "block"){
 		document.getElementById('mrlee').classList.add("animationFadeOutLeft");
 		exitLee();
@@ -172,6 +189,7 @@ function exitLee(){
 }
 
 function checkProgress(clicked){
+	isQuiz = false;
 	playSound();
 	switch(clicked){
 		case "back":
@@ -200,7 +218,7 @@ function checkProgress(clicked){
 				if(progressPage.innerHTML == ((pageOfQuiz[currentChapter-1]+1) + "/" + pagesPerChapter[currentChapter-1]) && (pageOfQuiz[currentChapter-1] !=0)){
 					callingMrLee();
 					if(currentChapter == 1){
-						document.querySelector('nav a:nth-child(1) span').style.pointerEvents = "";
+						document.querySelector('nav a:nth-child(1) .blocker').style.display = "none";
 						document.querySelector('nav a:nth-child(1) span').classList.add("done");
 					}
 				}else{
@@ -236,9 +254,10 @@ loadScript("js/soundControls.js", jsLoaded);
 
 window.onmessage = function(e){
     if (e.data == 'correct') {
-    	isQuiz = false;
     	aud.src = 'audio/correct.mp3';
     	aud.play();
         disableControls();
+    }else if(e.data == 'quizActive'){
+    	isQuiz = true;
     }
 };

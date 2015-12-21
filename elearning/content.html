@@ -81,38 +81,19 @@
 	document.querySelector('.elearning-content').style.height = document.querySelector('aside.chapters').offsetHeight + "px";
 	$(document).ready(function(){
 		PointerEventsPolyfill.initialize({});
-		var pointer = document.querySelector("#pointer");
-		var progress = document.querySelector(".progress");
-		var g1 = document.querySelector(".g1");
-		var g2 = document.querySelector(".g2");
-		var g3 = document.querySelector(".g3");
-		var g4 = document.querySelector(".g4");
+		var $pointer = $("#pointer"),
+			$progress = $(".progress"),
+			$g1 = $(".g1"),
+			$g2 = $(".g2"),
+			$g3 = $(".g3"),
+			$g4 = $(".g4");
 
-		TweenMax.to(pointer, .5, {scale:.8, repeat:-1, yoyo:true, ease:Linear.easeNone});
-		TweenMax.to(progress, 10, {'background-position-x': '1000px', repeat:-1, yoyo:false, ease:Linear});
-		TweenMax.to(g1, 3, {rotation: 360, repeat:-1, yoyo:false, ease:Linear.easeNone});
-		TweenMax.to(g2, 3, {rotation: 360, repeat:-1, yoyo:false, ease:Linear.easeNone});
-		TweenMax.to(g3, 3, {rotation: -360, repeat:-1, yoyo:false, ease:Linear.easeNone});
-		TweenMax.to(g4, 3, {rotation: 360, repeat:-1, yoyo:false, ease:Linear.easeNone});
-
-		// !animationSupported ? console.log('animation supported') : fallback();
-		// function fallback(){
-			
-
-			
-		// 	//TweenMax.to(mrlee, .3, {left: 250, repeat:1, yoyo:false, ease:Linear.easeNone},{left: 300, repeat:1, yoyo:false, ease:Power4});
-		// 	// $('.gears').hide();
-	 //  //   	$(".loading-gears").css("background-image","url('images/generator.gif')");
-		// 	//animateBar();
-		// }
-		// function animateBar() {
-		//     $('.progress').animate({'background-position-x': '0px'}, 0, 'linear');
-		//     $('.progress').animate({'background-position-x': '1000px'}, 10000, 'linear', animateBar);
-		    
-		// }
-		// function callingLee(){
-		// 	TweenLite.fromTo(g1, 2, {x: '-=200px'}, {x: 150, ease:Power4.easeInOut});
-		// }
+		TweenMax.to($pointer, .5, {scale:.8, repeat:-1, yoyo:true, ease:Linear.easeNone});
+		TweenMax.to($progress, 10, {'background-position-x': '1000px', repeat:-1, yoyo:false, ease:Linear});
+		TweenMax.to($g1, 3, {rotation: 360, repeat:-1, yoyo:false, ease:Linear.easeNone});
+		TweenMax.to($g2, 3, {rotation: 360, repeat:-1, yoyo:false, ease:Linear.easeNone});
+		TweenMax.to($g3, 3, {rotation: -360, repeat:-1, yoyo:false, ease:Linear.easeNone});
+		TweenMax.to($g4, 3, {rotation: 360, repeat:-1, yoyo:false, ease:Linear.easeNone});
 	});
 </script>
 <script type="text/javascript" src="js/preload.js"></script>
