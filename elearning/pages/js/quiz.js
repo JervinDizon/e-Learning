@@ -20,17 +20,17 @@ function loadScript(url, callback)
 }
 
 var jsLoaded = function() {
-	console.log("JS LOADED");
+  console.log("JS LOADED");
 };
 loadScript("http://code.jquery.com/jquery-2.1.4.min.js", jsLoaded);
 loadScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js", jsLoaded);
 loadScript("../js/classList.min.js", jsLoaded);
 
 for (var i = 1; i <= Object.keys(quiz["choices"]).length; i++) {
-	content += (i == quiz["answer"]) ? "<div class='answer'>" : "<div>";
-	content += "<span class='radio'><span><span></span></span></span>";
-	content += "<span class='label'>"+quiz["choices"][i]+"</span>";
-	content += "</div>"
+  content += (i == quiz["answer"]) ? "<div id='answer' class='answer'>" : "<div id='Xno"+ i +"' name='no"+ i +"' class='no'>";
+  content += (i == quiz["answer"]) ? "<span class='radio answer'><span class='answer'><span></span></span></span>" : "<span name='no"+ i +"' class='radio no'><span name='no"+ i +"' class='no'><span></span></span></span>";
+  content += (i == quiz["answer"]) ? "<span class='label answer'>"+quiz["choices"][i]+"</span>" : "<span name='no"+ i +"' class='label no'>"+quiz["choices"][i]+"</span>";
+  content += "</div>"
 }
 
 setTimeout("window.top.postMessage('quizActive', '*')")
@@ -47,28 +47,49 @@ function correctHandler(){
 function choicesHandler(e){
   document.querySelector('.message').className = 'message';
   console.log(this);
-	for (var i = 1; i <= Object.keys(quiz["choices"]).length; i++) {
+  for (var i = 1; i <= Object.keys(quiz["choices"]).length; i++) {
     console.log(this)
-		try{document.querySelector(".choices > div:nth-child("+i+")").classList.remove('selected')}catch(e){};
-	}
-	switch(e.target.getAttribute('class')) {
-    case 'answer':
-  		e.target.className = "answer selected";
-			for (var i = 1; i <= Object.keys(quiz["choices"]).length; i++) {
-				document.querySelector(".choices > div:nth-child("+i+")").style.pointerEvents = "none";
-			}
-  		document.querySelector('.message').innerHTML = 'Correct! Click "Next" Button.';
-  		document.querySelector('.message').className = 'message correct';
-  		document.querySelector('.question').classList.add('correct');
-			document.querySelector('.choices').removeEventListener('click', choicesHandler);
-      TweenLite.fromTo($('.message'), 1, { opacity: 0, scale:.3}, { opacity: 1, scale:1, ease: Bounce.easeOut, y: 0, onComplete:correctHandler});
-      break;
-    default:
-  		e.target.className = "selected";
-  		document.querySelector('.message').innerHTML = "Wrong. Try Again!"
-  		document.querySelector('.message').className = 'message wrong';
-      TweenLite.fromTo($('.message'), 1, { opacity: 0, scale:.3}, { opacity: 1, scale:1, ease: Bounce.easeOut, y: 0 });
-	}
+    try{document.querySelector(".choices > div:nth-child("+i+")").classList.remove('selected')}catch(e){};
+  }
+  if($(e.target).hasClass('answer')){
+    document.querySelector("#answer").className = "answer selected";
+    for (var i = 1; i <= Object.keys(quiz["choices"]).length; i++) {
+      document.querySelector(".choices > div:nth-child("+i+")").style.pointerEvents = "none";
+    }
+    document.querySelector('.message').innerHTML = 'Correct! Click "Next" Button.';
+    document.querySelector('.message').className = 'message correct';
+    document.querySelector('.question').classList.add('correct');
+    document.querySelector('.choices').removeEventListener('click', choicesHandler);
+    TweenLite.fromTo($('.message'), 1, { opacity: 0, scale:.3}, { opacity: 1, scale:1, ease: Bounce.easeOut, y: 0, onComplete:correctHandler});
+  }else{
+    var a = e.target.getAttribute('name');
+    console.log('#X'+a)
+    document.querySelector('#X'+a).className += " selected";
+    document.querySelector('.message').innerHTML = "Wrong. Try Again!"
+    document.querySelector('.message').className = 'message wrong';
+    TweenLite.fromTo($('.message'), 1, { opacity: 0, scale:.3}, { opacity: 1, scale:1, ease: Bounce.easeOut, y: 0 });
+  }
+  // switch(e.target.getAttribute('class')) {
+  //   case 'answer':
+  // if($(e.target));
+
+  //     //e.target.className = "answer selected";
+  //     document.querySelector("#answer").className = "answer selected";
+  //     for (var i = 1; i <= Object.keys(quiz["choices"]).length; i++) {
+  //       document.querySelector(".choices > div:nth-child("+i+")").style.pointerEvents = "none";
+  //     }
+  //     document.querySelector('.message').innerHTML = 'Correct! Click "Next" Button.';
+  //     document.querySelector('.message').className = 'message correct';
+  //     document.querySelector('.question').classList.add('correct');
+  //     document.querySelector('.choices').removeEventListener('click', choicesHandler);
+  //     TweenLite.fromTo($('.message'), 1, { opacity: 0, scale:.3}, { opacity: 1, scale:1, ease: Bounce.easeOut, y: 0, onComplete:correctHandler});
+  //     break;
+  //   default:
+  //     e.target.className += " selected";
+  //     document.querySelector('.message').innerHTML = "Wrong. Try Again!"
+  //     document.querySelector('.message').className = 'message wrong';
+  //     TweenLite.fromTo($('.message'), 1, { opacity: 0, scale:.3}, { opacity: 1, scale:1, ease: Bounce.easeOut, y: 0 });
+  // }
 };
 
-				
+        
