@@ -127,6 +127,22 @@
 		  -webkit-animation-fill-mode: forwards;
 		}
 
+		#disclaimer {
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    bottom: 1px;
+		    width: 100%;
+		    height: auto;
+		    margin: auto;
+		    padding: 20px 0px;
+		    text-align: center;
+		    color: #000;
+		    font-weight: lighter;
+		    font-family: 'roboto', sans-serif;
+		    font-size: .9em;
+		}
+		
 		@-webkit-keyframes bounceIn {
 		  0%, 20%, 40%, 60%, 80%, 100% {
 		    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -147,6 +163,7 @@
 	<div class="wrapper">
 		<div id="launch" class="btn" onclick="openpopup('content.html')">Launch E-Learning</div>
 		<div class="message" id="message">E-Learning Currently Open</div>
+		<div class="disclaimer" id="disclaimer">This module is best viewed on IE11/Edge, Chrome 47+ and Firefox 43+.</div>
 	</div>	
 </body>
 <script>
