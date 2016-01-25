@@ -7,18 +7,11 @@
 	<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/modernizr-1.7.min.js"></script>
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 	<script src="js/classList.min.js"></script>
 	<script src="js/pointer_events_polyfill.js"></script>
 	<script src="https://code.createjs.com/preloadjs-0.6.1.min.js"></script>
-	<script>
-		var animationSupported = false;
-		if (Modernizr.cssanimations) {
-            animationSupported = true;
-        }
-	</script>
 </head>
 <body>
 	<div class="preloader">
@@ -81,19 +74,13 @@
 	document.querySelector('.elearning-content').style.height = document.querySelector('aside.chapters').offsetHeight + "px";
 	$(document).ready(function(){
 		PointerEventsPolyfill.initialize({});
-		var $pointer = $("#pointer"),
-			$progress = $(".progress"),
-			$g1 = $(".g1"),
-			$g2 = $(".g2"),
-			$g3 = $(".g3"),
-			$g4 = $(".g4");
 
-		TweenMax.to($pointer, .5, {scale:.8, repeat:-1, yoyo:true, ease:Linear.easeNone});
-		TweenMax.to($progress, 10, {'background-position': '1000px 0px', repeat:-1, yoyo:false, ease:Linear});
-		TweenMax.to($g1, 3, {rotation: 360, repeat:-1, yoyo:false, ease:Linear.easeNone});
-		TweenMax.to($g2, 3, {rotation: 360, repeat:-1, yoyo:false, ease:Linear.easeNone});
-		TweenMax.to($g3, 3, {rotation: -360, repeat:-1, yoyo:false, ease:Linear.easeNone});
-		TweenMax.to($g4, 3, {rotation: 360, repeat:-1, yoyo:false, ease:Linear.easeNone});
+		TweenMax.to("#pointer", .5, {scale:.8, repeat:-1, yoyo:true, ease:Linear.easeNone});
+		TweenMax.to(".progress", 10, {'background-position': '1000px 0px', repeat:-1, yoyo:false, ease:Linear});
+		TweenMax.to(".g1", 3, {rotation: 360, repeat:-1, yoyo:false, ease:Linear.easeNone});
+		TweenMax.to(".g2", 3, {rotation: 360, repeat:-1, yoyo:false, ease:Linear.easeNone});
+		TweenMax.to(".g3", 3, {rotation: -360, repeat:-1, yoyo:false, ease:Linear.easeNone});
+		TweenMax.to(".g4", 3, {rotation: 360, repeat:-1, yoyo:false, ease:Linear.easeNone});
 	});
 </script>
 <script type="text/javascript" src="js/preload.js"></script>

@@ -2,7 +2,7 @@
 var totalChapters = 8,//change to total chapters
 	pagesPerChapter = [9,5,2,10,4,4,16,6], //change to number of pages per chapters separated in commas
 	chapterTitles = ["The Introduction to Selling Techniques","Demonstration of a Product","Buyer and Seller","Golden Rule in selling Concept","The Buying Decision Process","The Selling Process Stages","The Steps to Selling","The Brochure or Flyers"],
-	pageOfQuiz = [8,5,0,9,4,4,15,5],//number of the page where the quiz start. Note: can only be implemented on last 2 pages of the chapter
+	pageOfQuiz = [8,5,0,9,4,4,15,5],//number of the page where the quiz start.
 	pagesContentHolder = [],
 	soundContentHolder = [],
 	currentChapterPage =[],

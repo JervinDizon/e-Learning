@@ -101,7 +101,6 @@
 				preload.showContent();
 			}
 		}
-		// document.querySelector('.preloader .progress-bar .progress').innerHTML = Math.round(event.loaded * 100);
 	};
 
 	Preload.prototype.showContent = function(){
@@ -120,8 +119,9 @@
 		},3000)
 	}
 
-	 var preload = new Preload("http://jervindizon.github.io/elearning/");
-	//var preload = new Preload("");
+	//var preload = new Preload("http://jervindizon.github.io/elearning/");
+	var preload = new Preload(""); 
+
 	preload.setPreload();
 	preload.loadManifest();
 
