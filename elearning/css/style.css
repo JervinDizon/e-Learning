@@ -1,8 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -179,11 +174,6 @@ nav {
   /*background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);*/
   background-size: 40px 40px;
   background-position-x: 1000px; 
-  -webkit-animation: barAnim 10s infinite linear;
-  -moz-animation: barAnim 10s infinite linear;
-  -ms-animation: barAnim 10s infinite linear;
-  -o-animation: barAnim 10s infinite linear;
-  animation: barAnim 10s infinite linear;
 }
 
 .preloader .progress-bar .mask{
@@ -1032,31 +1022,5 @@ iframe{
 @-moz-keyframes counterSpin { 100% { -moz-transform: rotate(-360deg); } }
 @-webkit-keyframes counterSpin { 100% { -webkit-transform: rotate(-360deg); } }
 @keyframes counterSpin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }*/
-
-@-webkit-keyframes barAnim {
-  from {background-position-x: 0px;};
-  to {background-position-x: 1000px;};
-}
-
-@-moz-keyframes barAnim {
-  from {background-position-x: 0px;};
-  to {background-position-x: 1000px;};
-}
-
-@-ms-keyframes barAnim {
-  from {background-position-x: 0px;};
-  to {background-position-x: 1000px;};
-}
-
-@-o-keyframes barAnim {
-  from {background-position-x: 0px;};
-  to {background-position-x: 1000px;};
-}
-
-@keyframes barAnim {
-  from {background-position-x: 0px;};
-  to {background-position-x: 1000px;};
-}
-
 
 
