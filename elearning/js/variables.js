@@ -1,13 +1,13 @@
 //PAGE Variables
 var totalChapters = 8,//change to total chapters
 	pagesPerChapter = [9,5,2,10,4,4,16,6], //change to number of pages per chapters separated in commas
-	chapterTitles = ["The Introduction to Selling Techniques","Demonstration of a Product","Buyer and Seller","Golden Rule in selling Concept","The Buying Decision Process","The Selling Process Stages","The Steps to Selling","The Brochure or Flyers"],
+	chapterTitles = ["CHAPTER 1 - Principles of Salesmanship","CHAPTER 2 - Demonstration of a Product","CHAPTER 3 - Buyer and Seller","CHAPTER 4 - Golden Rule in selling Concept","CHAPTER 5 - The Buying Decision Process","CHAPTER 6 - The Selling Process Stages","CHAPTER 7 - The Steps to Selling","CHAPTER 8 - The Brochure or Flyers"],
 	pageOfQuiz = [8,5,0,9,4,4,15,5],//number of the page where the quiz start.
 	pagesContentHolder = [],
 	soundContentHolder = [],
 	currentChapterPage =[],
 	totalPages = 0,
-	currentChapter = 1,
+	currentChapter = 0,
 	navigationCurrentPage = [],
 	content = "",
 	arrowClicked = true,

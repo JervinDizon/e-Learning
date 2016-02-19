@@ -1,7 +1,21 @@
 
 
 function nextPage() {
-	if(currentChapter == totalChapters && currentChapterPage[currentChapter-1] == pagesPerChapter[currentChapter-1]+1){return};
+	if(currentChapter == totalChapters && currentChapterPage[currentChapter-1] == pagesPerChapter[currentChapter-1]+1){
+		return
+	}else if(currentChapter == 0){
+		document.querySelector('nav a:nth-child(1) span').classList.add("selected");
+		document.querySelector('nav a:nth-child(1)').classList.add("selected");
+		document.querySelector('nav a:nth-child(1) span img').classList.add("selected");
+		pageTitle.innerHTML = chapterTitles[0];
+		progressPage.innerHTML = 1 + "/" + pagesPerChapter[0];
+		aud.src = 'audio/audio1.mp3';
+		Iframe.src = "./pages/page1.html";
+		currentChapter = 1;
+		enableControls();
+		playSound();
+		return;
+	};
 	for (var e = 0; e < totalChapters; e++) { 
 		if(currentChapterPage[e] == pagesPerChapter[e]+1 && currentChapter == e+1 && currentChapter != 1){
 			currentChapter = currentChapter + 1;

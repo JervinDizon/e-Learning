@@ -27,6 +27,7 @@
 			{id:'images/sound_mute.png',src:this.path+'images/sound_mute.png'},
 			{id:'images/sound_unmute.png',src:this.path+'images/sound_unmute.png'},
 			{id:'images/thumblock.png',src:this.path+'images/thumblock.png'},
+			{id:'pages/page0.html',src:this.path+'pages/page0.html'},
 			{id:'pages/images/cognizant.png',src:this.path+'pages/images/cognizant.png'},
 			{id:'pages/images/page03img01.png',src:this.path+'pages/images/page03img01.png'},
 			{id:'pages/images/page15img01.png',src:this.path+'pages/images/page15img01.png'},

@@ -302,10 +302,6 @@ nav a:nth-child(8) span{background: url("../images/thumbm01c08.png");
                         background-repeat: no-repeat;
                         background-size: 132px auto;}
 
-nav a:nth-child(1) span img{
-  opacity: 0;
-}
-
 nav a p{
   font-size: 2em;
 }
@@ -324,7 +320,7 @@ nav a span.selected {
 }
 
 nav a.selected {
-  color: #fff;
+  color: #fff !important;
   /*pointer-events: none;*/
 }
 
