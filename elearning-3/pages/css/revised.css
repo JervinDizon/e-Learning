@@ -94,7 +94,8 @@ li{
 }
 
 .chapter-page h1 {
-	padding: 95px 50px;
+	position: absolute;
+	margin: 0 50px;
 }
 
 .headline-container {

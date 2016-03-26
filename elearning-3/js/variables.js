@@ -1,13 +1,13 @@
 //PAGE Variables
 var totalChapters = 7,//change to total chapters
 	pagesPerChapter = [3,11,6,8,14,12,12], //change to number of pages per chapters separated in commas
-	chapterTitles = ["GMB Fundamentals Course 1","Learn to Listen","Empathy","Rapport Building","Assertive","Being Polite","SMART Goals"],
+	chapterTitles = ["CHAPTER 1 - GMB Fundamentals Course 1","CHAPTER 2 - Learn to Listen","CHAPTER 3 - Empathy","CHAPTER 4 - Rapport Building","CHAPTER 5 - Assertive","CHAPTER 6 - Being Polite","CHAPTER 7 - SMART Goals"],
 	pageOfQuiz = [0,10,5,7,12,11,8],//number of the page where the quiz start. Note: can only be implemented on last 2 pages of the chapter
 	pagesContentHolder = [],
 	soundContentHolder = [],
 	currentChapterPage =[],
 	totalPages = 0,
-	currentChapter = 1,
+	currentChapter = 0,
 	navigationCurrentPage = [],
 	content = "",
 	arrowClicked = true,
@@ -53,7 +53,7 @@ function loadScript(url, callback)
 }
 
 var jsLoaded = function() {
-	console.log("JS LOADED");
+	//console.log("JS LOADED");
 };
 
 loadScript("js/createArray.js", jsLoaded);

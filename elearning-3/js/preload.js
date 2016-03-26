@@ -57,6 +57,7 @@
 			{id:'pages/images/skills.png',src:this.path+'pages/images/skills.png'},
 			{id:'pages/images/smart.png',src:this.path+'pages/images/smart.png'},
 			{id:'pages/images/steps.png',src:this.path+'pages/images/steps.png'},
+			{id:'pages/page0.html',src:this.path+'pages/page0.html'},
 			{id:'pages/images/tag.png',src:this.path+'pages/images/tag.png'}
 		];
 
@@ -96,28 +97,26 @@
 	Preload.prototype.onProgress = function(event){
 		// console.log(Math.round(event.loaded * 100));
 		currentProgress = event.loaded * 1.5;
-		console.log(Math.round(currentProgress * 100));
+		//console.log(Math.round(currentProgress * 100));
 		var anim = "";
 			anim += "-webkit-transition: width 500ms ease-in-out;";
 			anim += "-moz-transition: width 500ms ease-in-out;";
 			anim += "transition: width 500ms ease-in-out;";
 			anim += "width: " + Math.round(currentProgress * 100) + "%;";
 		if(Math.round(currentProgress * 100) <= 100){
-			document.querySelector('.preloader .progress-bar .progress').style.cssText = anim;
-			document.querySelector('.preloader .progress-bar .progress').style.width = Math.round(currentProgress * 100) + "%";
-			document.querySelector('.preloader .progress-bar .progress-text').innerHTML = " Initializing Content... " + Math.round(currentProgress * 100) + "%";
+			document.querySelector('.preloader .progress-bar .mask').style.cssText = anim;
+			document.querySelector('.preloader .progress-bar .mask').style.width = Math.round(currentProgress * 100) + "%";
+			document.querySelector('.preloader .progress-bar .progress-text').innerHTML = "Initializing Content... " + Math.round(currentProgress * 100) + "%";
 		}else if(Math.round(currentProgress * 100) == 101){
 			if(!pageShowed){
 				pageShowed = true;
 				preload.showContent();
 			}
 		}
-		// document.querySelector('.preloader .progress-bar .progress').innerHTML = Math.round(event.loaded * 100);
 	};
 
 	Preload.prototype.showContent = function(){
 		setTimeout(function(){
-			console.log("show content")
 			document.querySelector('.main-wrapper').style.top = "0";
 			document.querySelector('.main-wrapper').classList.add("animationFadein");
 			document.querySelector('.preloader').style.display = "none";
@@ -127,15 +126,19 @@
 			script.src = 'js/variables.js';
 			head.appendChild(script);
 		},1000)
+		setTimeout(function(){
+			$("nav a span").after("<div class='blocker'></div>");
+		},3000)
 	}
 
-	 var preload = new Preload("http://jervindizon.github.io/elearning-3/");
-	//var preload = new Preload("");
+	//var preload = new Preload("http://jervindizon.github.io/elearning-3/");
+	var preload = new Preload(""); 
+
 	preload.setPreload();
 	preload.loadManifest();
 
 	//-- Refresh contents to extend expiration from cache
 	setInterval(function(){
 		preload.loadManifest();
-	},300000)
+	},150000)
 })();
