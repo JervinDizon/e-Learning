@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>quiz</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href='css/quiz.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="container">
+		<h1>Quiz</h1>
+		<h2 class="question"></h2>
+		<div class="choices">
+		</div>
+		<div class="message hide" id="message">Message</div>
+	</div>
+</body>
+<script>
+	var quiz = {
+		"question": "Ben meets a new customer for sale of product. During<br>the meeting, Ben carefully listens to the customer. State<br>which of the below is not a effective listening activity",
+		"choices": {
+			"1": "A. Hearing",
+			"2": "B. Filtering",
+			"3": "C. Comprehending",
+			"4": "D. Recalling",
+			"5": "E. Responding"
+		},
+		"answer":"4"
+	};
+</script>
+<script type="text/javascript" src="js/quiz.js"></script>
+</html>

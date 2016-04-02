@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>quiz</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href='css/quiz.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="container">
+		<h1>Quiz</h1>
+		<h2 class="question"></h2>
+		<div class="choices">
+		</div>
+		<div class="message hide" id="message">Message</div>
+	</div>
+</body>
+<script>
+	var quiz = {
+		"question": "Goals must be something you are capable of reaching.<br>This will help Mike in",
+		"choices": {
+			"1": "A. I will do sales better by 15% than the last year",
+			"2": "B. The productivity can be increased by 2X",
+			"3": "C. Next year will be a successful year. Profits will increase by 12%",
+			"4": "D. All of the above"
+		},
+		"answer":"4"
+	};
+</script>
+<script type="text/javascript" src="js/quiz.js"></script>
+</html>
