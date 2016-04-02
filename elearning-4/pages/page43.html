@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>quiz</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href='css/quiz.css' rel='stylesheet' type='text/css'>
+	<style>
+		div.choices {
+		    margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Quiz</h1>
+		<h2 class="question"></h2>
+		<div class="choices">
+		</div>
+		<div class="message hide" id="message">Message</div>
+	</div>
+</body>
+<script>
+	var quiz = {
+		"question": "Mike is leading the Sales presentation for the new product launch. He follows all the strategies of effective communication and listening<br><ol><li>Showing willingness to listen</li><li>Showing empathy</li><li>Sending positive nonverbal cues</li><li>Asking right questions</li></ol>Which of these are good strategies for improved listening",
+		"choices": {
+			"1": "A. 1, 2, 4 only",
+			"2": "B. 2, 3, 4 only",
+			"3": "C. 1, 2, 3 & 4",
+			"4": "D. 4, 2, 1 only"
+		},
+		"answer":"3"
+	};
+</script>
+<script type="text/javascript" src="js/quiz.js"></script>
+</html>

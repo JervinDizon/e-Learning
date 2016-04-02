@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>quiz</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href='css/quiz.css' rel='stylesheet' type='text/css'>
+	<style>
+		div.choices {
+		    margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Quiz</h1>
+		<h2 class="question"></h2>
+		<div class="choices">
+		</div>
+		<div class="message hide" id="message">Message</div>
+	</div>
+</body>
+<script>
+	var quiz = {
+		"question": "What are the elements of service<br><ol><li>Reliability</li><li>Assurance</li><li>Tangible</li><li>Empathy</li><li>Repetitiveness</li></ol><br>Provide with the correct option.",
+		"choices": {
+			"1": "A. 1, 2, 3, 5",
+			"2": "B. 1, 3, 4, 5",
+			"3": "C. 1, 2, 3, 4",
+			"4": "D. 2, 3, 4, 5"
+		},
+		"answer":"3"
+	};
+</script>
+<script type="text/javascript" src="js/quiz.js"></script>
+</html>

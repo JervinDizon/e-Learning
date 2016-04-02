@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>quiz</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href='css/quiz.css' rel='stylesheet' type='text/css'>
+	<style>
+		div.choices {
+		    margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Quiz</h1>
+		<h2 class="question"></h2>
+		<div class="choices">
+		</div>
+		<div class="message hide" id="message">Message</div>
+	</div>
+</body>
+<script>
+	var quiz = {
+		"question": "Mike’s team is performing exceptionally well this year on Sales targets and the team is asked to share their best practice on Customer expectations.<br><br>Mike decides to share the customer expectation as a TREAT<br><ol><li>Ability to provide what was promised</li><li>Being accurate</li><li>Willingness to help</li><li>Knowledge and courtesy you show your customers</li></ol>What type of TREAT is the above points detailing",
+		"choices": {
+			"1": "A. Trust, Tangible, Assurance",
+			"2": "B. Assurance, Trust, Responsiveness",
+			"3": "C. Responsiveness, Assurance, Trust",
+			"4": "D. Empathy, Tangibles, Trust"
+		},
+		"answer":"2"
+	};
+</script>
+<script type="text/javascript" src="js/quiz.js"></script>
+</html>

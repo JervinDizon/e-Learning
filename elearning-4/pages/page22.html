@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>quiz</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href='css/quiz.css' rel='stylesheet' type='text/css'>
+	<style>
+		div.choices {
+		    margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Quiz</h1>
+		<h2 class="question"></h2>
+		<div class="choices">
+		</div>
+		<div class="message hide" id="message">Message</div>
+	</div>
+</body>
+<script>
+	var quiz = {
+		"question": "Chris is the sales representative working on a sale with the customer. The customer has declined the product twice and Chris is convincing the customer with FAB technique, ie features, benefits and advantages of the product. The customer is difficult to understand and tends to suppress his expressions.<br><br>Chris deals the customer by<br><ol><li>Providing a thoughtful and well organized approach</li><li>Using specific questions</li><li>Providing detailed information</li></ol>What kind of customer behavior handling pattern is the above points",
+		"choices": {
+			"1": "A. Dominance",
+			"2": "B. Influencing",
+			"3": "C. Steadiness",
+			"4": "D. Compliance"
+		},
+		"answer":"4"
+	};
+</script>
+<script type="text/javascript" src="js/quiz.js"></script>
+</html>
